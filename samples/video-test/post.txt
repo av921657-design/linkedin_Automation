@@ -1,0 +1,1 @@
+Video post test — checking the automation can attach and process a video clip.

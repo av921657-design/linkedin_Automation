@@ -1,0 +1,3 @@
+Testing the automation with an attached image.
+
+If you can read this and see the graphic, the full pipeline works.

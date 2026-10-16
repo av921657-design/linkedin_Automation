@@ -1,0 +1,11 @@
+node_modules/
+chrome-profile/
+state/
+logs/
+downloads/
+posted/
+failed/
+queue/
+vibe_images/
+*.log
+.DS_Store

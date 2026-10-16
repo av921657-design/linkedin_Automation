@@ -1,0 +1,5 @@
+Hello LinkedIn! This is a test post from my new automation setup.
+
+It supports multiple paragraphs. Media files placed in this folder
+(same one as post.txt) are attached automatically, and hashtags from
+config.json get appended on publish.
