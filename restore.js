@@ -73,13 +73,26 @@ async function main() {
   ensureDirs();
   const tmpTar = path.join(DIRS.downloads, `restore-${Date.now()}.tar.gz`);
   const relTar = path.relative(ROOT, tmpTar).split(path.sep).join('/');
-  await new Promise((resolve, reject) => {
-    const out = fs.createWriteStream(tmpTar);
-    out.on('error', reject);
-    out.on('finish', resolve);
-    decipher.on('error', reject);
-    Readable.from([data]).pipe(decipher).pipe(out);
-  });
+  try {
+    await new Promise((resolve, reject) => {
+      const out = fs.createWriteStream(tmpTar);
+      out.on('error', reject);
+      out.on('finish', resolve);
+      decipher.on('error', reject);
+      Readable.from([data]).pipe(decipher).pipe(out);
+    });
+  } catch (err) {
+    // Every GCM failure (wrong key, edited or half-downloaded file) arrives as
+    // "unable to authenticate data", which nobody can act on.
+    if (/authenticate|unsupported state/i.test(err.message)) {
+      throw new Error(
+        `"${chosen}" does not open with this passphrase. Archives keep the passphrase that was active when they were written, ` +
+        `so a later ${process.platform === 'win32' ? 'backup:setup:win' : 'backup:setup'} leaves older files unreadable — ` +
+        `try an archive from after that change, or restore the original passphrase. (A truncated download also looks like this.)`,
+      );
+    }
+    throw err;
+  }
   // Relative operand + cwd, so no drive letter reaches tar's argv (GNU tar
   // reads "D:" as a remote host and fails).
   execFileSync('tar', ['-xzf', relTar], { cwd: ROOT, stdio: 'inherit' });

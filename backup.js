@@ -7,7 +7,7 @@
  * Encrypts with AES-256-GCM; the passphrase lives ONLY on this machine —
  * macOS Keychain on the Mac (see src/secrets.js for the resolution order;
  * Windows uses the NTFS-locked state/backup.pass file) and your password
- * manager — never in the repo, never on Vercel, never in the archive name.
+ * manager — never in the repo, never on Vercel, never inside the archive.
  *
  * Report (file, size, sha256) is pushed to the dashboard so you can see
  * "last backup" from anywhere. Run manually: `npm run backup`.
@@ -49,6 +49,9 @@ const TAR_EXCLUDES = [
   '--exclude', 'chrome-profile/Default/PersistentOriginTrials',
   '--exclude', 'chrome-profile/Default/Safe Browsing Cookies',
   '--exclude', 'state/run.lock',
+  // The archive must not carry its own key: backups sit in OneDrive, and a
+  // passphrase inside them would make every cloud copy self-decrypting.
+  '--exclude', 'state/backup.pass',
 ];
 
 async function main() {
