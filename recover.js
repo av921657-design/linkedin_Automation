@@ -24,7 +24,7 @@ const union = (a, b) => ({
 async function main() {
   const { url, token, enabled } = dashboardSettings();
   if (!enabled) {
-    console.error('No dashboard settings in state/dashboard.json (url + token). On a new Mac: copy that file from your backup archive first.');
+    console.error('No dashboard settings in state/dashboard.json (url + token). Pair this machine with the deployment: npm run sync:setup -- --url https://<project>.vercel.app --token <SYNC_TOKEN>   — or copy that file from a backup archive.');
     process.exitCode = 1;
     return;
   }

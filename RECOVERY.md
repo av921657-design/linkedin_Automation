@@ -41,9 +41,9 @@ Three variables in Vercel → Project → Settings → Environment Variables dec
 
 | Variable | Needed for | Without it |
 |---|---|---|
-| `BLOB_READ_WRITE_TOKEN` | reading/writing config, status, ledger, auth — injected automatically when a Vercel **Blob store is connected** to the project | every login answers "The dashboard cannot read its Vercel Blob store" |
+| `BLOB_READ_WRITE_TOKEN` | reading/writing config, status, ledger, auth — injected automatically when a Vercel **Blob store is connected** to the project | login answers 503. "No Blob store is attached to this Vercel project" = nothing is connected; "Blob credentials are present but the store refused the request" = a token is set but belongs to another/suspended store |
 | `DASHBOARD_PASSWORD` | the **first** login only (bootstrap). Once a password is set in-app it is ignored forever | no credential exists yet, so nothing can sign in — set the first password on the login page instead |
-| `SYNC_TOKEN` | the runner (Mac/PC) pushing results, and `npm run dashboard:unlock` | runs never appear on the dashboard; lockout recovery is unavailable |
+| `SYNC_TOKEN` | the runner (Mac/PC) pushing results, and `npm run dashboard:unlock` | runs never appear on the dashboard; lockout recovery is unavailable. Pair the machine with `npm run sync:setup -- --url <dashboard> --token <value>`, then `npm run sync:check` |
 
 - **Fresh project, no `DASHBOARD_PASSWORD`:** the login page says the deployment is unclaimed. Use **First run: set a password** — the first password is written as a create-only record, so it can never overwrite one that already exists.
 - **Locked out after a password was set:** `npm run dashboard:unlock` on the machine holding `state/dashboard.json` (it authenticates with `SYNC_TOKEN`, not the password). This signs out every existing session.
