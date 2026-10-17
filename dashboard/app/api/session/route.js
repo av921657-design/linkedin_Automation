@@ -1,10 +1,13 @@
 import { NextResponse } from 'next/server';
-import { authCookieHeader, claimPassword, clearCookieHeader, passwordState, STORE_UNREADABLE, verifyPassword } from '../../../lib/auth';
+import { authCookieHeader, claimPassword, clearCookieHeader, passwordState, storeUnreadable, verifyPassword } from '../../../lib/auth';
 
 export const dynamic = 'force-dynamic';
 
 /** Nothing about the credential can be trusted while the store is unreadable, so no branch may sign anyone in. */
-const storeUnreachable = () => NextResponse.json({ ok: false, error: STORE_UNREADABLE.error }, { status: STORE_UNREADABLE.status });
+const storeUnreachable = () => {
+  const { status, error } = storeUnreadable();
+  return NextResponse.json({ ok: false, error }, { status });
+};
 
 /**
  * Sign in. On a deployment that has no credential of any kind this also sets
@@ -22,13 +25,17 @@ export async function POST(request) {
   }
   const password = String(body?.password ?? '');
 
+  // Ask the store what it holds before comparing anything: on a deployment the
+  // store cannot answer, that is the whole answer, and probing once instead of
+  // a read plus a probe is what keeps a broken deployment under one deadline.
+  const state = await passwordState();
+  if (state === 'unknown') return storeUnreachable();
+
   if (password && (await verifyPassword(password))) {
     const res = NextResponse.json({ ok: true });
     res.headers.append('set-cookie', await authCookieHeader(request));
     return res;
   }
-
-  const state = await passwordState();
 
   if (body?.setup !== true) {
     // The plain sign-in attempt must say *why* nothing matched, otherwise a
@@ -40,11 +47,9 @@ export async function POST(request) {
         error: 'This dashboard has no password yet. Set the first one below.',
       }, { status: 401 });
     }
-    if (state === 'unknown') return storeUnreachable();
     return NextResponse.json({ ok: false, error: 'Wrong password.' }, { status: 401 });
   }
 
-  if (state === 'unknown') return storeUnreachable();
   if (state !== 'unclaimed') {
     return NextResponse.json({
       ok: false,

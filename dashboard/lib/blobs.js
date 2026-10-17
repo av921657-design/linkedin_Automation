@@ -12,17 +12,40 @@ export const BACKUP_PATH = 'dashboard/backup.json';
 // DASHBOARD_PASSWORD env (which stays as the first-login bootstrap only).
 export const AUTH_PATH = 'dashboard/auth.json';
 
+/**
+ * Reads are bounded by this, in milliseconds.
+ *
+ * A store call that cannot be answered does not fail quickly: the SDK retries,
+ * so `head()` can sit there for tens of seconds. Unbounded, every request that
+ * touches the store hangs with it — the login button spins forever and the
+ * function burns its whole timeout instead of saying what is wrong. Reads are
+ * also the only place a deadline is safe: a write cut short may still land, so
+ * writes keep their natural completion.
+ */
+const READ_DEADLINE_MS = 4000;
+
+/** Reject rather than wait past the deadline; the underlying call is abandoned. */
+function withDeadline(promise, ms = READ_DEADLINE_MS) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      const timer = setTimeout(() => reject(new Error(`blob store read exceeded ${ms}ms`)), ms);
+      timer.unref?.();
+    }),
+  ]);
+}
+
 /** Read a JSON blob by pathname; null when it does not exist (yet) or fails. */
 export async function readJson(pathname) {
   try {
-    const meta = await head(pathname);
+    const meta = await withDeadline(head(pathname));
     const headers = {};
     // Private blobs: the download URL requires the store token (OIDC deployments
     // get it injected; without it the unsigned URL 403s).
     if (process.env.BLOB_READ_WRITE_TOKEN) headers.authorization = `Bearer ${process.env.BLOB_READ_WRITE_TOKEN}`;
     // Cache-buster: overwriting a fixed blob path can serve a slightly stale
     // copy from the edge for a few seconds otherwise.
-    const res = await fetch(meta.url + (meta.url.includes('?') ? '&' : '?') + '_ts=' + Date.now(), { headers, cache: 'no-store' });
+    const res = await withDeadline(fetch(meta.url + (meta.url.includes('?') ? '&' : '?') + '_ts=' + Date.now(), { headers, cache: 'no-store' }));
     if (!res.ok) return null;
     return await res.json();
   } catch {
@@ -48,12 +71,26 @@ export async function writeJson(pathname, value) {
  */
 export async function stateOf(pathname) {
   try {
-    await head(pathname);
+    await withDeadline(head(pathname));
     return 'present';
   } catch (err) {
     if (err instanceof BlobNotFoundError) return 'absent';
     return 'unknown';
   }
+}
+
+/**
+ * Why the store cannot be read, as far as the function can tell from its own
+ * environment. The two answers need opposite fixes, so they must not share one
+ * message: 'no-credentials' means nothing was ever injected (no store attached
+ * to the project), 'refused' means a token is present but the store rejected it
+ * (suspended, deleted, or a token belonging to a different store).
+ * @returns {'no-credentials'|'refused'}
+ */
+export function storeProblem() {
+  if (process.env.BLOB_READ_WRITE_TOKEN) return 'refused';
+  if (process.env.VERCEL_OIDC_TOKEN && process.env.BLOB_STORE_ID) return 'refused';
+  return 'no-credentials';
 }
 
 /**

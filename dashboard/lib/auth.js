@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { createJson, readJson, stateOf, writeJson, AUTH_PATH } from './blobs';
+import { createJson, readJson, stateOf, storeProblem, writeJson, AUTH_PATH } from './blobs';
 
 const COOKIE_NAME = 'dash_auth';
 const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
@@ -10,12 +10,21 @@ const SCRYPT = { N: 16384, r: 8, p: 1, keylen: 32 };
 /**
  * Shared answer for both auth routes when the credential store itself is
  * unreachable — the login or reset must then refuse rather than blame the
- * password the user typed.
+ * password the user typed. Wording is decided per request because it depends on
+ * which of the two failure modes the deployment is in.
  */
-export const STORE_UNREADABLE = {
-  status: 503,
-  error: 'The dashboard cannot read its Vercel Blob store. Set BLOB_READ_WRITE_TOKEN in the project environment variables, connect a Blob store, then redeploy.',
-};
+export function storeUnreadable() {
+  if (storeProblem() === 'no-credentials') {
+    return {
+      status: 503,
+      error: 'No Blob store is attached to this Vercel project, so the dashboard has nowhere to read credentials from. Vercel dashboard -> this project -> Storage -> connect a Blob store (this injects BLOB_READ_WRITE_TOKEN), then redeploy.',
+    };
+  }
+  return {
+    status: 503,
+    error: 'Blob credentials are present but the store refused the request. Check that the store is still connected to this project and not suspended (Vercel dashboard -> Storage), then redeploy — a token copied from a different store also lands here.',
+  };
+}
 
 /** One-way hash of the password with a random per-reset salt. Never reversible. */
 function hashPassword(password, saltHex) {
