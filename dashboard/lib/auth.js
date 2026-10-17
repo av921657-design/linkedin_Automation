@@ -7,6 +7,16 @@ const COOKIE_KEY = 'cadence-session-v1';
 // scrypt params kept modest so a login/reset costs ~100ms, not seconds, on serverless.
 const SCRYPT = { N: 16384, r: 8, p: 1, keylen: 32 };
 
+/**
+ * Shared answer for both auth routes when the credential store itself is
+ * unreachable — the login or reset must then refuse rather than blame the
+ * password the user typed.
+ */
+export const STORE_UNREADABLE = {
+  status: 503,
+  error: 'The dashboard cannot read its Vercel Blob store. Set BLOB_READ_WRITE_TOKEN in the project environment variables, connect a Blob store, then redeploy.',
+};
+
 /** One-way hash of the password with a random per-reset salt. Never reversible. */
 function hashPassword(password, saltHex) {
   return crypto

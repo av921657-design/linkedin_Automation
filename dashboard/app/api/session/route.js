@@ -1,13 +1,10 @@
 import { NextResponse } from 'next/server';
-import { authCookieHeader, claimPassword, clearCookieHeader, passwordState, verifyPassword } from '../../../lib/auth';
+import { authCookieHeader, claimPassword, clearCookieHeader, passwordState, STORE_UNREADABLE, verifyPassword } from '../../../lib/auth';
 
 export const dynamic = 'force-dynamic';
 
 /** Nothing about the credential can be trusted while the store is unreadable, so no branch may sign anyone in. */
-const storeUnreachable = () => NextResponse.json({
-  ok: false,
-  error: 'The dashboard cannot read its Vercel Blob store. Set BLOB_READ_WRITE_TOKEN in the project environment variables, connect a Blob store, then redeploy.',
-}, { status: 503 });
+const storeUnreachable = () => NextResponse.json({ ok: false, error: STORE_UNREADABLE.error }, { status: STORE_UNREADABLE.status });
 
 /**
  * Sign in. On a deployment that has no credential of any kind this also sets

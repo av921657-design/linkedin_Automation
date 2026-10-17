@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { isAuthorized, verifyPassword, resetPassword, authCookieHeader } from '../../../lib/auth';
+import { isAuthorized, passwordState, STORE_UNREADABLE, verifyPassword, resetPassword, authCookieHeader } from '../../../lib/auth';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,6 +26,17 @@ export async function POST(request) {
 
   // A trusted Mac (token) may reset blind to recover a lockout; anyone else must know the current password.
   if (kind !== 'token' && !(await verifyPassword(current))) {
+    // Say what is actually missing instead of blaming a typed password: an
+    // unclaimed deployment has no current password to get wrong. This reveals
+    // no more than the sign-in route already does.
+    const state = await passwordState();
+    if (state === 'unknown') return NextResponse.json({ ok: false, error: STORE_UNREADABLE.error }, { status: STORE_UNREADABLE.status });
+    if (state === 'unclaimed') {
+      return NextResponse.json({ ok: false, error: 'No dashboard password exists yet — set the first one on the sign-in page.' }, { status: 401 });
+    }
+    if (state === 'bootstrapped') {
+      return NextResponse.json({ ok: false, error: 'Current password is incorrect. (This deployment still uses the DASHBOARD_PASSWORD environment variable.)' }, { status: 401 });
+    }
     return NextResponse.json({ ok: false, error: 'Current password is incorrect.' }, { status: 401 });
   }
 
