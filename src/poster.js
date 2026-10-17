@@ -3,6 +3,8 @@ import { DIRS } from './paths.js';
 import { guardAuth, screenshot } from './browser.js';
 
 const FEED_URL = 'https://www.linkedin.com/feed/';
+// Direct composer route: works even when the feed's "Start a post" pill is inert.
+const COMPOSER_URL = 'https://www.linkedin.com/sharing/compose';
 
 export class PostError extends Error {
   constructor(message, screenshotPath = null) {
@@ -163,6 +165,46 @@ async function openFeed(page) {
     throw new PostError(`"Start a post" button not found (feed layout changed or session issue). Screenshot: ${shot ?? 'n/a'}`, shot);
   });
   await startButton.click();
+
+  // The pill is no longer reliably clickable: on some accounts the synthetic
+  // click lands (hit-testing confirms it) and LinkedIn simply does nothing.
+  // Keyboard activation and the direct route both open the same composer, so
+  // try all three before declaring the composer missing.
+  if (await waitForEditor(page, 5000)) return;
+  await startButton.focus().catch(() => {});
+  await page.keyboard.press('Enter');
+  if (await waitForEditor(page, 6000)) return;
+  await page.goto(COMPOSER_URL, { waitUntil: 'domcontentloaded', timeout: 45000 }).catch(() => {});
+  await waitForEditor(page, 8000);
+}
+
+/** Editors the composer has used so far, newest first. */
+const EDITOR_SELECTORS = [
+  '.tiptap.ProseMirror',
+  '.ql-editor',
+  'div.editor-content[contenteditable="true"]',
+  '[contenteditable="true"][role="textbox"]',
+  '[contenteditable="true"]',
+];
+
+/** Any visible composer editor on the page? */
+async function visibleEditor(page) {
+  for (const sel of EDITOR_SELECTORS) {
+    const loc = page.locator(sel).first();
+    if (await loc.isVisible().catch(() => false)) return loc;
+  }
+  return null;
+}
+
+/** Poll for a visible editor for up to `ms`, or return null. */
+async function waitForEditor(page, ms) {
+  const deadline = Date.now() + ms;
+  while (Date.now() < deadline) {
+    const found = await visibleEditor(page);
+    if (found) return found;
+    await page.waitForTimeout(400);
+  }
+  return null;
 }
 
 /**
@@ -171,18 +213,11 @@ async function openFeed(page) {
  * the whole page, and return the editor plus its enclosing scope.
  */
 async function findComposer(page) {
-  const editorSelectors = [
-    '.ql-editor',
-    'div.editor-content[contenteditable="true"]',
-    '[contenteditable="true"][role="textbox"]',
-    '[contenteditable="true"]',
-  ];
-
   const scopes = [page.getByRole('dialog'), page];
   const deadline = Date.now() + 15000;
   while (Date.now() < deadline) {
     for (const scope of scopes) {
-      for (const sel of editorSelectors) {
+      for (const sel of EDITOR_SELECTORS) {
         const loc = scope.locator(sel).first();
         if (await loc.isVisible().catch(() => false)) {
           return { editor: loc, scope };
