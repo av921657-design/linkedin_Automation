@@ -35,6 +35,20 @@ Without it, archives are unrecoverable. To set your own passphrase instead of th
 6. `./install-schedule.sh` and `./install-backup-schedule.sh`
 7. Verify: `npm run dry-run` → should log `Config source: dashboard` and find nothing new to post (proving the ledger survived).
 
+## Dashboard environment variables (why login can fail)
+
+Three variables in Vercel → Project → Settings → Environment Variables decide whether the dashboard can sign anyone in. After changing any of them you must **redeploy** for it to take effect.
+
+| Variable | Needed for | Without it |
+|---|---|---|
+| `BLOB_READ_WRITE_TOKEN` | reading/writing config, status, ledger, auth — injected automatically when a Vercel **Blob store is connected** to the project | every login answers "The dashboard cannot read its Vercel Blob store" |
+| `DASHBOARD_PASSWORD` | the **first** login only (bootstrap). Once a password is set in-app it is ignored forever | no credential exists yet, so nothing can sign in — set the first password on the login page instead |
+| `SYNC_TOKEN` | the runner (Mac/PC) pushing results, and `npm run dashboard:unlock` | runs never appear on the dashboard; lockout recovery is unavailable |
+
+- **Fresh project, no `DASHBOARD_PASSWORD`:** the login page says the deployment is unclaimed. Use **First run: set a password** — the first password is written as a create-only record, so it can never overwrite one that already exists.
+- **Locked out after a password was set:** `npm run dashboard:unlock` on the machine holding `state/dashboard.json` (it authenticates with `SYNC_TOKEN`, not the password). This signs out every existing session.
+- **"Wrong password." with a configured store:** a credential really does exist, so it is the password that is wrong — not the setup. Check for a stale `DASHBOARD_PASSWORD` from an earlier deployment before assuming the store is misconfigured.
+
 ## Failure modes that don't need the above
 
 - **Mac dead but coming back:** nothing — OneDrive syncs the archive; the cloud ledger is current to the last completed run.

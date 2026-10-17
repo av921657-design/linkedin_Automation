@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { readJson, writeJson, AUTH_PATH } from './blobs';
+import { createJson, readJson, stateOf, writeJson, AUTH_PATH } from './blobs';
 
 const COOKIE_NAME = 'dash_auth';
 const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
@@ -100,6 +100,39 @@ export async function resetPassword(newPassword) {
   };
   await writeJson(AUTH_PATH, record);
   return { updatedAt: record.updatedAt, secret: record.hash };
+}
+
+/**
+ * Which credential governs login?
+ *   claimed      — dashboard/auth.json holds a salted hash (an in-app reset or claim set it)
+ *   bootstrapped — no stored record, so DASHBOARD_PASSWORD is the first-login password
+ *   unclaimed    — neither: nothing can sign in until someone sets the first password
+ *   unknown      — the blob store could not be read, so no safe conclusion exists
+ */
+export async function passwordState() {
+  const store = await stateOf(AUTH_PATH);
+  if (store === 'present') return 'claimed';
+  if (store === 'unknown') return 'unknown';
+  return process.env.DASHBOARD_PASSWORD ? 'bootstrapped' : 'unclaimed';
+}
+
+/**
+ * Set the very first password on a deployment that has none. The write is a
+ * create-only put, so this can never replace an existing credential — a
+ * concurrent claim or a blob read that lied about absence both lose.
+ * @returns {{outcome: 'created'|'exists'|'failed', secret: string, updatedAt: string}}
+ */
+export async function claimPassword(newPassword) {
+  const salt = crypto.randomBytes(16).toString('hex');
+  const record = {
+    v: 1,
+    salt,
+    hash: hashPassword(newPassword, salt),
+    updatedAt: new Date().toISOString(),
+    source: 'claim',
+  };
+  const outcome = await createJson(AUTH_PATH, record);
+  return { outcome, secret: record.hash, updatedAt: record.updatedAt };
 }
 
 /** Vercel terminates TLS and forwards the original scheme; `next dev` is plain http. */

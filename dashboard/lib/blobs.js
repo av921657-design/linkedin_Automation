@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { head, put } from '@vercel/blob';
+import { BlobNotFoundError, BlobPreconditionFailedError, head, put } from '@vercel/blob';
 
 // Single source of truth for the automation: the runner on the Mac pulls
 // config.json from here and pushes its run results back into status/history.
@@ -37,6 +37,47 @@ export async function writeJson(pathname, value) {
     allowOverwrite: true,
     contentType: 'application/json',
   });
+}
+
+/**
+ * Does this blob exist? Only an answer from the store counts as proof of
+ * absence: a missing token, a network failure or a suspended store is
+ * 'unknown', never 'absent' — otherwise a read failure would look like an
+ * unclaimed deployment.
+ * @returns {'present'|'absent'|'unknown'}
+ */
+export async function stateOf(pathname) {
+  try {
+    await head(pathname);
+    return 'present';
+  } catch (err) {
+    if (err instanceof BlobNotFoundError) return 'absent';
+    return 'unknown';
+  }
+}
+
+/**
+ * Write only while the pathname is still free. The store enforces this, so a
+ * claim can never overwrite an existing record and two racing claims cannot
+ * both win.
+ * @returns {'created'|'exists'|'failed'} — 'failed' means the store refused or
+ * was unreachable, which must be treated as "do not sign anyone in".
+ */
+export async function createJson(pathname, value) {
+  try {
+    await put(pathname, JSON.stringify(value, null, 2), {
+      access: 'private',
+      addRandomSuffix: false,
+      allowOverwrite: false,
+      contentType: 'application/json',
+    });
+    return 'created';
+  } catch (err) {
+    // The API reports a colliding pathname as a bad_request carrying its own
+    // wording, so match on the message as well as the ETag precondition type.
+    const text = String(err?.message ?? err);
+    return err instanceof BlobPreconditionFailedError || /exist/i.test(text) ? 'exists' : 'failed';
+  }
 }
 
 /** Key-sorted stringify so reordering fields never fakes a new version. */

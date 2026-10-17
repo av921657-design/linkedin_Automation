@@ -26,6 +26,9 @@ const TABS = [
 export default function Page() {
   const [authed, setAuthed] = useState(null); // null = checking
   const [password, setPassword] = useState('');
+  const [confirmPw, setConfirmPw] = useState('');
+  const [setup, setSetup] = useState(false); // first run: choose the password
+  const [unclaimed, setUnclaimed] = useState(false);
   const [loginErr, setLoginErr] = useState('');
   const [cfg, setCfg] = useState(null);
   const [loadedVersion, setLoadedVersion] = useState(null);
@@ -100,18 +103,30 @@ export default function Page() {
   async function login(e) {
     e.preventDefault();
     setLoginErr('');
+    if (setup && password !== confirmPw) {
+      setLoginErr('The two passwords do not match.');
+      return;
+    }
     try {
       const res = await fetch('/api/session', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify(setup ? { password, setup: true } : { password }),
       });
       if (res.ok) {
         setPassword('');
+        setConfirmPw('');
+        setSetup(false);
+        setUnclaimed(false);
         setAuthed(true);
         await load();
       } else {
-        setLoginErr((await res.json()).error || 'Login failed.');
+        const j = await res.json().catch(() => ({}));
+        // Nothing configured server-side: this is a fresh deployment, so offer
+        // to set the first password with the text they just typed.
+        if (j.unclaimed && !setup) setSetup(true);
+        setUnclaimed(Boolean(j.unclaimed));
+        setLoginErr(j.error || 'Login failed.');
       }
     } catch {
       setLoginErr('Could not reach the server.');
@@ -135,23 +150,45 @@ export default function Page() {
         <h1 className="wordmark">Cadence<span className="dot">.</span></h1>
         <p className="tagline">The posting machine on your Mac, operated from here.</p>
         <form className="login-card" onSubmit={login}>
-          <label htmlFor="dash-pw">Dashboard password</label>
+          <label htmlFor="dash-pw">{setup ? 'Choose a dashboard password' : 'Dashboard password'}</label>
           <input
             id="dash-pw"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="••••••••••••"
-            autoComplete="current-password"
+            placeholder={setup ? 'at least 8 characters' : '••••••••••••'}
+            autoComplete={setup ? 'new-password' : 'current-password'}
             autoFocus
           />
+          {setup && (
+            <>
+              <label htmlFor="dash-pw2" style={{ marginTop: 14 }}>Confirm password</label>
+              <input
+                id="dash-pw2"
+                type="password"
+                value={confirmPw}
+                onChange={(e) => setConfirmPw(e.target.value)}
+                autoComplete="new-password"
+                placeholder="repeat it"
+              />
+            </>
+          )}
           {loginErr && <div className="err">{loginErr}</div>}
-          <button className="primary" type="submit">Unlock dashboard</button>
+          <button className="primary" type="submit">{setup ? 'Set password & unlock' : 'Unlock dashboard'}</button>
           <div className="login-foot">
-            <Link className="linkbtn" href="/reset">Forgot? Reset password</Link>
+            {setup
+              ? <button className="linkbtn" type="button" onClick={() => { setSetup(false); setLoginErr(''); }}>Back to sign in</button>
+              : <Link className="linkbtn" href="/reset">Forgot? Reset password</Link>}
+            {!setup && (
+              <button className="linkbtn" type="button" onClick={() => { setSetup(true); setLoginErr(''); }}>First run: set a password</button>
+            )}
           </div>
         </form>
-        <p className="login-hint">Set it on the Mac: <code>npm run dashboard:unlock</code></p>
+        <p className="login-hint">
+          {unclaimed
+            ? 'Nothing is stored yet, so this deployment is unclaimed — the first password set here becomes the only one.'
+            : <>Locked out? On the Mac: <code>npm run dashboard:unlock</code></>}
+        </p>
       </div>
     );
   }
