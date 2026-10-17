@@ -39,9 +39,18 @@ On a fresh deployment the sign-in page offers **First run: set a password**. Tha
 
 Recovering a locked-out dashboard: `npm run dashboard:unlock` (Mac) or the `SYNC_TOKEN` route on `/api/reset`.
 
+Connect the machine that posts to the deployment — one file on this side, one variable on theirs:
+
+```bash
+npm run sync:setup -- --url https://<project>.vercel.app --generate   # writes state/dashboard.json, prints the token once
+npm run sync:check                                                    # proves the dashboard accepted it
+```
+
+`--generate` only finishes working after you paste that value into the Vercel project as `SYNC_TOKEN` and redeploy. Until both sides match, every run logs one line about it and posts from the local `config.json`. `npm run dashboard:remember` stores the sign-in password in the same locked file so `npm run dashboard:password` can copy it to your clipboard later.
+
 ## Backups
 
-`backup.js` archives `queue/`, `failed/`, `state/` and the Chrome profile into an AES-256-GCM bundle in your cloud storage, keeping the last 7.
+`backup.js` archives `queue/`, `failed/`, `state/` and the Chrome profile into an AES-256-GCM bundle in your cloud storage, keeping the last 7. The passphrase file itself is excluded from the archive, so a stolen cloud copy stays unreadable — the password-manager copy below is the only way back in. Archives written before a passphrase change cannot be opened afterwards; if you must rotate it, note the date so you know which files predate it.
 
 ```bash
 npm run backup:setup       # Mac: store the passphrase in Keychain

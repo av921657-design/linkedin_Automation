@@ -16,11 +16,14 @@
     "schedule:win": "node windows/install-tasks.mjs install",
     "schedule:win:status": "node windows/install-tasks.mjs status",
     "recover": "node recover.js",
+    "sync:setup": "node sync-setup.js",
+    "sync:check": "node sync-setup.js --check",
+    "dashboard:remember": "read -r -s -p 'Dashboard password (hidden, saved only to state/dashboard.json): ' pw && printf %s \"$pw\" | node sync-setup.js --remember-password && unset pw && echo Saved.",
     "llm:check": "node llm-check.js",
     "test:llm": "node tests/chat-unit.mjs",
     "llm:setup": "read -r -s -p 'Paste your FREE API key (input hidden, saved to state/rewrite.key): ' llmkey && printf %s \"$llmkey\" > state/rewrite.key && chmod 600 state/rewrite.key && unset llmkey && echo && node llm-check.js",
-    "dashboard:password": "node -e \"const c=JSON.parse(require('fs').readFileSync('state/dashboard.json','utf8'));if(!c.password){console.error('No password in state/dashboard.json');process.exit(1)}process.stdout.write(c.password)\" | pbcopy && echo \"Dashboard password copied to clipboard (it was never printed or committed).\"",
-    "dashboard:password:win": "node -e \"const c=JSON.parse(require('fs').readFileSync('state/dashboard.json','utf8'));if(!c.password){console.error('No password in state/dashboard.json');process.exit(1)}process.stdout.write(c.password)\" | clip && echo Dashboard password copied to clipboard (it was never printed or committed).",
+    "dashboard:password": "node -e \"const c=JSON.parse(require('fs').readFileSync('state/dashboard.json','utf8'));if(!c.password){console.error('state/dashboard.json holds no password - store it once with: npm run dashboard:remember');process.exit(1)}process.stdout.write(c.password)\" | pbcopy && echo \"Dashboard password copied to clipboard (it was never printed or committed).\"",
+    "dashboard:password:win": "node -e \"const c=JSON.parse(require('fs').readFileSync('state/dashboard.json','utf8'));if(!c.password){console.error('state/dashboard.json holds no password - store it once with: npm run dashboard:remember');process.exit(1)}process.stdout.write(c.password)\" | clip && echo Dashboard password copied to clipboard (it was never printed or committed).",
     "dashboard:unlock": "read -r -s -p 'New dashboard password (hidden, min 8 chars): ' pw && echo && printf %s \"$pw\" | node unlock.js && unset pw && echo \"Dashboard password reset. Old dashboard sessions are signed out.\""
   },
   "dependencies": {

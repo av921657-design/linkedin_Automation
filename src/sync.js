@@ -20,6 +20,22 @@ import { DIRS } from './paths.js';
 
 const CONNECT_TIMEOUT_MS = 8000;
 
+/**
+ * A rejected token is a provisioning mistake, not a transient fault, so saying
+ * it once per run is enough — otherwise every wake of an unsynced machine logs
+ * the same three failures. Per-process: a long-lived process that starts
+ * working mid-run is still picked up.
+ */
+let tokenRejected = false;
+function noteRejection(log, status) {
+  if (status !== 401 && status !== 403) return false;
+  if (!tokenRejected) {
+    tokenRejected = true;
+    log(`Dashboard refused the sync token (HTTP ${status}) — cloud config, status and ledger sync are off for this run. Check it with: npm run sync:check`);
+  }
+  return true;
+}
+
 export function dashboardSettings() {
   let file = {};
   try {
@@ -101,7 +117,7 @@ export async function resolveConfig(log) {
         return { cfg: body.config, origin: 'dashboard', version: body.version ?? versionOf(body.config) };
       }
       log('Dashboard config failed sanity checks — ignoring it this run.');
-    } else {
+    } else if (!noteRejection(log, res.status)) {
       log(`Dashboard config fetch returned HTTP ${res.status} — using fallback.`);
     }
   } catch (err) {
@@ -131,7 +147,7 @@ function countFiles(dir) {
 /** Push a run summary; swallow every error — telemetry must never break posting. */
 export async function pushStatus(info, log) {
   const { url, token, enabled } = dashboardSettings();
-  if (!enabled) return;
+  if (!enabled || tokenRejected) return;
   try {
     const payload = {
       ...info,
@@ -148,7 +164,7 @@ export async function pushStatus(info, log) {
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(CONNECT_TIMEOUT_MS),
     });
-    if (!res.ok) log(`Status push returned HTTP ${res.status}.`);
+    if (!res.ok && !noteRejection(log, res.status)) log(`Status push returned HTTP ${res.status}.`);
   } catch (err) {
     log(`Status push failed: ${err.message}`);
   }
@@ -161,7 +177,7 @@ export async function pushStatus(info, log) {
  */
 export async function pushLedger(ledger, log) {
   const { url, token, enabled } = dashboardSettings();
-  if (!enabled) return;
+  if (!enabled || tokenRejected) return;
   try {
     const res = await fetch(`${url}/api/ledger`, {
       method: 'PUT',
@@ -173,7 +189,7 @@ export async function pushLedger(ledger, log) {
       }),
       signal: AbortSignal.timeout(CONNECT_TIMEOUT_MS),
     });
-    if (!res.ok) log(`Ledger push returned HTTP ${res.status}.`);
+    if (!res.ok && !noteRejection(log, res.status)) log(`Ledger push returned HTTP ${res.status}.`);
   } catch (err) {
     log(`Ledger push failed: ${err.message}`);
   }

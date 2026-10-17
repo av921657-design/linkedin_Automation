@@ -60,6 +60,8 @@ npm run backup:setup:win
 
 Type the passphrase twice (characters stay hidden). It is saved to `state\backup.pass`, locked by Windows to your user account only, and never committed (the `state/` folder is git-ignored). The value is never printed.
 
+**Use the same passphrase that encrypted the archives already in OneDrive** — take it from your password manager, don't invent a new one. Every archive is bound to the passphrase that was active when it was written, so a different value here makes Step 3 fail with "unable to authenticate data", and archives written before a later change stop opening.
+
 ## Step 3 — Restore your data from the OneDrive backup
 
 ```powershell
@@ -115,7 +117,18 @@ Other controls: `node windows\install-tasks.mjs pause|resume|remove [post|backup
 - Chrome must run in your **logged-on session**. A locked screen is normally fine; a signed-out or off PC cannot post. If posts start failing around your posting times, keep the session signed in (Settings → Accounts → "Use my sign-in info to automatically finish setting up my device after an update or restart" → On).
 - One machine posting is the design. If both Mac and this PC are on schedules, pause one (`./install-schedule.sh pause` on the Mac; `pause post` here) — the shared ledger still prevents duplicate posts, but one runner keeps the history clean.
 
-## Step 7 — Verify everything works
+## Step 7 — Point this PC at the dashboard
+
+The runner needs a local record of the dashboard address plus the same `SYNC_TOKEN` the Vercel project has — that pair is what lets it pull cloud config and push run history and the ledger:
+
+```powershell
+npm run sync:setup -- --url https://<your-project>.vercel.app --token <the SYNC_TOKEN value>
+npm run sync:check
+```
+
+`--token` is for a token Vercel already has. If it doesn't, use `--generate` instead: it prints a fresh value once, you paste it into the project's Environment Variables, redeploy, then re-run `npm run sync:check`. The file it writes (`state\dashboard.json`, locked to your user, never committed) is also what `npm run recover` and `npm run dashboard:unlock` read. Skip this step and the automation still posts — from `config.json` on this PC — with one log line saying the sync token was refused.
+
+## Step 8 — Verify everything works
 
 ```powershell
 npm run dry-run
@@ -142,6 +155,7 @@ Need a post right now, off-schedule? `npm run post-now`.
 | `tar` not found | Windows 10 1803+ ships `tar.exe` in System32 — update Windows, or run the commands from **Git Bash** (installed with Git for Windows, which also bundles tar). |
 | "No backup passphrase found" | Step 2 not done on this PC — `npm run backup:setup:win`. (A Mac-only passphrase won't be in this PC's file; the passphrase itself is the same one from your password manager.) |
 | "decryption failed / bad passphrase" | Wrong passphrase in `state\backup.pass` — delete the file, re-run `npm run backup:setup:win`. |
+| `unable to authenticate data` during restore | This PC's passphrase is not the one that encrypted that archive (Step 2 warning) — restore an archive written after the change, or re-enter the original passphrase. Deleting `state\backup.pass` and setting a third value fixes nothing. |
 | `schtasks` "Access is denied" | Register from your normal user account (the tasks run in your interactive session); no admin elevation needed. |
 | Runs show `auth-paused` | LinkedIn asked for re-login — `npm run login` again. |
 | No runs at all | `npm run schedule:win:status` — if NOT REGISTERED, re-run `npm run schedule:win`. |
