@@ -78,7 +78,7 @@ const dailyTrigger = (hour, minute) => {
 
 function taskXml({ description, script, triggers }) {
   return (
-    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<?xml version="1.0" encoding="UTF-16"?>\n` +
     `<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">\n` +
     `  <RegistrationInfo><Description>${esc(description)}</Description></RegistrationInfo>\n` +
     `  <Triggers>\n${triggers}  </Triggers>\n` +
@@ -172,7 +172,10 @@ async function install(which, printXml) {
   }
 
   for (const j of jobs) {
-    fs.writeFileSync(j.file, j.xml);
+    // Task Scheduler's XML reader rejects a UTF-8 file even when the document
+    // declares UTF-8 ("unable to switch the encoding"); the format it accepts —
+    // and the one its own export writes — is UTF-16LE with a BOM.
+    fs.writeFileSync(j.file, Buffer.concat([Buffer.from('\uFEFF', 'utf16le'), Buffer.from(j.xml, 'utf16le')]));
     if (printXml) {
       console.log(`\n--- ${j.name} (${j.file}) ---\n${j.xml}`);
       continue;
@@ -217,9 +220,15 @@ async function main() {
     case 'status':
       return perTask(which, (n) => {
         try {
-          return schtasks(['/Query', '/TN', n, '/FO', 'LIST']).split(/\r?\n/)
-            .filter((l) => /^(TaskName|Status|Next Run Time|Last Run Time)/i.test(l))
-            .join(' | ');
+          // /FO LIST repeats one block per trigger (32 for a full week of
+          // wakes), so keep only the first value of each field.
+          const first = new Map();
+          for (const l of schtasks(['/Query', '/TN', n, '/FO', 'LIST']).split(/\r?\n/)) {
+            const m = l.match(/^(TaskName|Status|Last Run Time|Next Run Time)\s*:\s*(.+)$/i);
+            if (m && !first.has(m[1].toLowerCase())) first.set(m[1].toLowerCase(), `${m[1]}: ${m[2].trim()}`);
+          }
+          const line = [...first.values()].join(' | ');
+          return line || 'REGISTERED (no fields parsed)';
         } catch {
           return 'NOT REGISTERED';
         }
