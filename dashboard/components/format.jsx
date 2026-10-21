@@ -59,7 +59,7 @@ export function Format({ cfg, update }) {
           <div style={{ marginTop: 10 }}>
             <Check label="credit the source account (adds “Source @handle”)" get={() => r().creditSource !== false} set={(v) => setR({ creditSource: v })} />
           </div>
-          <Txt label="credit wording" get={() => r().creditLabel ?? 'Source'} set={(v) => setR({ creditLabel: v })} hint="prefixed to the handle on LinkedIn reposts, e.g. “Source @some-handle”. Clear it for a bare @handle; untick above to drop the line entirely." />
+          <Txt label="credit wording" get={() => r().creditLabel ?? 'Source'} set={(v) => setR({ creditLabel: v })} hint="prefixed to the handle on LinkedIn reposts, e.g. “Source @iraj-janali”. Clear it for a bare @handle; untick above to drop the line entirely." />
           <h3>Cut original text at these markers</h3>
           <p className="hint">e.g. your ✍ signature line.</p>
           <Txt label="cut markers (comma separated)" get={() => (r().cutFromMarkers ?? []).join(', ')} set={(v) => setR({ cutFromMarkers: v.split(',').map((x) => x.trim()).filter(Boolean) })} />

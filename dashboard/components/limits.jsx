@@ -21,23 +21,24 @@ export function Limits({ cfg, update, countdown }) {
       <div className="card">
         <h2>Posting pace</h2>
         <div className="grid-3">
+          <Num label="posts per day (hard cap)" get={() => cfg.post?.maxPerDay ?? 1} set={(v) => update((d) => { d.post = { ...(d.post ?? {}), maxPerDay: v ?? 1 }; })} />
           <Num label="posts per run" get={() => cfg.post?.maxPerRun ?? 1} set={(v) => update((d) => { d.post = { ...(d.post ?? {}), maxPerRun: v ?? 1 }; })} />
           <Num label="min keystroke delay (ms)" get={() => cfg.post?.minTypeDelayMs ?? 12} set={(v) => update((d) => { d.post = { ...(d.post ?? {}), minTypeDelayMs: v ?? 12 }; })} />
           <Num label="max keystroke delay (ms)" get={() => cfg.post?.maxTypeDelayMs ?? 40} set={(v) => update((d) => { d.post = { ...(d.post ?? {}), maxTypeDelayMs: v ?? 40 }; })} />
         </div>
-        <p className="hint">Keystroke delays make typing look human. Keep posts-per-run low (1–2).</p>
+        <p className="hint"><b>Posts per day</b> is the ceiling for the whole day, counted in the posting timezone on the Schedule tab — a published post or video spends one of them, a failed attempt spends nothing. Extra posting hours act as retries for the day's item, not as extra items; a Telegram topic that arrives after the cap is held to the next day. Keystroke delays make typing look human; keep posts-per-run at 1.</p>
       </div>
 
       <div className="card">
-        <h2>Engage other people's posts <span className={`pill ${enabled ? (hasTargets ? 'on' : 'warn') : 'off'}`}>{enabled ? (hasTargets ? 'active' : 'needs targets') : 'off'}</span></h2>
-        <p className="hint">Runs on <b>every scheduled posting wake</b> (see the Schedule tab — it now follows your day-wise hours), independent of your own posting. It scans the handles' recent activity and/or your auto-refreshed feed, picks the best post you have <b>not</b> engaged yet, likes it and leaves a short comment. Each post is touched only once, ever.</p>
+        <h2>Engage other people's posts <span className={`pill ${enabled ? (hasTargets ? 'warn' : 'fail') : 'off'}`}>{enabled ? (hasTargets ? 'refused by the profile rule' : 'off — and it has no targets') : 'off'}</span></h2>
+        <p className="hint"><b>Switched off by your own rule</b> (19 Oct 2026): liking and commenting means opening other people&apos;s profile pages and your feed, and the only LinkedIn page this automation may open is the post composer. Turning this on changes nothing on LinkedIn — every wake logs a refusal and moves on. The controls are kept for the day you lift that rule yourself, with <span className="mono">LINKEDIN_POLICY_OVERRIDE=1</span> in the terminal that starts the run. When it does run, it works on every scheduled posting wake (see the Schedule tab), independent of your own posting: it scans the handles&apos; recent activity and/or your auto-refreshed feed, picks the best post you have <b>not</b> engaged yet, likes it and leaves a short comment. Each post is touched only once, ever.</p>
         <div style={{ marginBottom: 8 }}>
           <Check label="enabled" get={() => eng().enabled === true} set={(v) => setEng({ enabled: v })} />
         </div>
         <div className="grid-2">
           <div className="field">
             <label>handles — one per line (linkedin.com/in/&lt;name&gt; or just &lt;name&gt;)</label>
-            <textarea rows={3} value={handlesText} placeholder={'e.g. some-handle\nhttps://www.linkedin.com/in/someone'} onChange={(e) => setEng({ handles: linesToList(e.target.value) })} />
+            <textarea rows={3} value={handlesText} placeholder={'e.g. iraj-janali\nhttps://www.linkedin.com/in/someone'} onChange={(e) => setEng({ handles: linesToList(e.target.value) })} />
           </div>
           <div className="field">
             <label>keywords — one per line (filters the home feed)</label>

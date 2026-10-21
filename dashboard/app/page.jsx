@@ -11,6 +11,10 @@ import { Format } from '../components/format';
 import { Rewrite } from '../components/rewrite';
 import { Schedule } from '../components/schedule';
 import { Limits } from '../components/limits';
+import { Research } from '../components/research';
+import { Newsletter } from '../components/newsletter';
+import { Repository } from '../components/repository';
+import { Telegram } from '../components/telegram';
 import { Raw } from '../components/raw';
 
 const TABS = [
@@ -20,6 +24,10 @@ const TABS = [
   ['rewrite', 'Article rewrite'],
   ['schedule', 'Schedule'],
   ['limits', 'Posting & limits'],
+  ['research', 'Web research'],
+  ['newsletter', 'AI newsletter'],
+  ['repository', 'Repository'],
+  ['telegram', 'Telegram approval'],
   ['raw', 'Raw JSON'],
 ];
 
@@ -319,6 +327,10 @@ function Shell({ cfg, loadedVersion, dirty, tab, setTab, status, history, cloud,
         {tab === 'rewrite' && cfg && <Rewrite cfg={cfg} update={update} />}
         {tab === 'schedule' && cfg && <Schedule cfg={cfg} update={update} />}
         {tab === 'limits' && cfg && <Limits cfg={cfg} update={update} countdown={countdown} />}
+        {tab === 'research' && cfg && <Research cfg={cfg} update={update} />}
+        {tab === 'newsletter' && cfg && <Newsletter cfg={cfg} update={update} status={status} tz={countdown.tz} />}
+        {tab === 'repository' && <Repository />}
+        {tab === 'telegram' && cfg && <Telegram cfg={cfg} update={update} />}
         {tab === 'raw' && <Raw cfg={cfg} update={update} />}
       </div>
 

@@ -10,10 +10,119 @@ export const linesToTags = (s) =>
 /** One-per-line text → trimmed strings (for handles, keywords, comment pool). */
 export const linesToList = (s) => String(s ?? '').split('\n').map((t) => t.trim()).filter(Boolean);
 
-export const RESULT_PILL = { posted: 'ok', nothing: '', failed: 'fail', error: 'fail', 'auth-paused': 'warn' };
-export const RESULT_LABEL = { posted: 'posted', nothing: 'idle', failed: 'failed', error: 'error', 'auth-paused': 'paused' };
+export const RESULT_PILL = { posted: 'ok', nothing: '', failed: 'fail', error: 'fail', 'auth-paused': 'warn', 'daily-cap': '', 'waiting-for-plan': '', 'no-match': 'warn', retrying: 'warn', busy: '', held: '' };
+export const RESULT_LABEL = { posted: 'posted', nothing: 'idle', failed: 'failed', error: 'error', 'auth-paused': 'paused', 'daily-cap': "day's cap reached", 'waiting-for-plan': 'waiting for its hour', 'no-match': 'no match', retrying: 'retrying', busy: 'another run', held: 'held' };
+
+/* ---------- the day's question (run.js → status.daily) ---------- */
+
+export const DAILY_LABEL = {
+  asked: 'asked you on Telegram',
+  'not-asked': 'did not ask',
+  'already-asked': 'already asked today',
+  'no-match': 'nothing fresh to ask',
+  waiting: 'searching',
+  preview: 'dry run — would have asked',
+};
+export const DAILY_PILL = { asked: 'ok', 'not-asked': 'warn', 'no-match': 'warn', waiting: 'warn', 'already-asked': '', preview: '' };
+
+/** One plain-language sentence about why today's post was or wasn't asked about. */
+export function dailyNote(daily, tz = 'Asia/Kolkata') {
+  if (!daily || !daily.result) return '';
+  const label = DAILY_LABEL[daily.result] || daily.result;
+  if (daily.result === 'not-asked') return `${label}: ${daily.why || 'no reason reported'}`;
+  if (daily.result === 'no-match') return `${label} — everything the web feeds returned is already on your page, or nothing was fresh enough.`;
+  if (daily.result === 'already-asked') return `${label} — the answer is still wanted from you on Telegram.`;
+  const bits = [];
+  if (daily.topic) bits.push(`topic “${daily.topic}”`);
+  if (Number.isFinite(daily.candidates)) bits.push(`${daily.candidates} candidate(s)`);
+  if (daily.answerBy) bits.push(`answer by ${stamp(daily.answerBy, tz)}`);
+  return bits.length ? `${label} — ${bits.join(', ')}` : label;
+}
 
 export const SLOTS = [10, 12, 14, 16, 18, 20];
+
+/* ---------- the newsletter calendar (mirrors src/newsletter.js on the Mac) ---------- */
+
+export const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+export const NL_EVENTS_DEFAULT = [
+  { name: 'Morning issue', days: [...WEEKDAYS], hour: 9, on: true },
+  { name: 'Evening issue', days: [...WEEKDAYS], hour: 18, on: true },
+];
+
+/** One row per issue: the weekdays it runs on, the hour it lands, whether it is on. */
+export function eventsOf(nl) {
+  // An old config that names only day/days is one row at draftHour, not the
+  // default calendar — the Mac runner reads it that way, so the editor must too.
+  const legacy = (Array.isArray(nl?.days) && nl.days.length ? nl.days : nl?.day ? [nl.day] : null)
+    ?.map((x) => String(x).slice(0, 3)).filter((d) => WEEKDAYS.includes(d));
+  const raw = Array.isArray(nl?.events) && nl.events.length ? nl.events
+    : legacy?.length ? [{ name: 'Issue', days: legacy, hour: Number(nl?.draftHour) || 8 }]
+      : NL_EVENTS_DEFAULT;
+  const list = raw.slice(0, 6).map((e, i) => {
+    const days = WEEKDAYS.filter((d) => (Array.isArray(e?.days) ? e.days : []).map((x) => String(x).slice(0, 3)).includes(d));
+    return {
+      name: String(e?.name ?? '').trim() || `Issue ${i + 1}`,
+      days: days.length ? days : [...WEEKDAYS],
+      hour: Math.min(23, Math.max(0, Math.round(Number(e?.hour)) || (NL_EVENTS_DEFAULT[i]?.hour ?? 9))),
+      on: e?.on !== false,
+    };
+  });
+  return list.sort((a, b) => a.hour - b.hour);
+}
+
+/** "twice a day", "every day", "twice a week" — the cadence in a reader's words. */
+export function cadenceWords(nl) {
+  const ev = eventsOf(nl).filter((e) => e.on);
+  if (!ev.length) return 'no set day';
+  if (ev.every((e) => e.days.length === 7)) {
+    if (ev.length === 1) return 'every day';
+    return ev.length === 2 ? 'twice a day' : `${ev.length} times a day`;
+  }
+  const perWeek = ev.reduce((a, e) => a + e.days.length, 0);
+  const label = dayRange([...new Set(ev.flatMap((e) => e.days))]);
+  if (perWeek === 7) return 'every day';
+  if (perWeek === 1) return `once a week (${label})`;
+  if (perWeek === 2) return `twice a week (${label})`;
+  if (perWeek <= 6) return `${['', '', '', 'three', 'four', 'five', 'six'][perWeek]} times a week (${label})`;
+  return `${perWeek} issues a week (${label})`;
+}
+
+/** "Mon to Fri", "Tue & Fri". */
+export function dayRange(days) {
+  const list = WEEKDAYS.filter((d) => (days ?? []).includes(d));
+  if (list.length === 7) return 'every day';
+  if (list.length === 1) return list[0];
+  if (list.join('+') === 'Mon+Tue+Wed+Thu+Fri') return 'weekdays';
+  if (list.join('+') === 'Sat+Sun') return 'weekends';
+  const head = list.slice(0, -1);
+  return head.length ? `${head.join(', ')} & ${list.at(-1)}` : list.join(' & ');
+}
+
+
+export const NL_LABEL = {
+  drafted: 'drafted',
+  'awaiting-approval': 'waiting on your yes',
+  approved: 'approved',
+  held: 'on hold',
+  drafting: 'being researched',
+};
+export const NL_PILL = { drafted: '', 'awaiting-approval': 'warn', approved: 'ok', held: 'warn', drafting: 'warn' };
+
+/** What the weekly tick actually did. `waiting` is either a status word or the
+ *  runner's own reason sentence, so an unlisted value is still readable. */
+export function newsletterNote(nl) {
+  if (!nl) return 'This week has not been reported by the Mac yet.';
+  if (nl.enabled === false) return 'Switched off in the config, so no issue was researched or asked about.';
+  const bits = [];
+  if (nl.drafted) bits.push(`drafted ${nl.drafted}`);
+  if (nl.offered === true) bits.push('asked on Telegram');
+  else if (nl.offered === false) bits.push(`it could not be sent (${nl.blocked || 'no Telegram'})`);
+  if (nl.published?.result) bits.push(nl.published.result === 'posted' ? 'published to LinkedIn' : `publish attempt: ${nl.published.result}`);
+  if (nl.error) bits.push(`it hit an error (${nl.error})`);
+  const state = NL_LABEL[nl.waiting] ? `The current issue is ${NL_LABEL[nl.waiting]}` : nl.waiting ? `This issue: ${nl.waiting}` : 'Nothing new yet';
+  return bits.length ? `${state} — ${bits.join(', ')}.` : `${state}.`;
+}
 
 /* ---------- day-wise schedule (mirrors src/schedule.js on the Mac) ---------- */
 

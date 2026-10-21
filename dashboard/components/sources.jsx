@@ -9,7 +9,7 @@ export function Sources({ cfg, update }) {
   return (
     <div className="card panel">
       <h2>Sources <span className="pill">{sources.length}</span></h2>
-      <p className="hint">Disabled sources are skipped entirely. URL changes apply on the next run. Per-source <span className="mono">reformat</span> overrides live in the Raw JSON tab.</p>
+      <p className="hint">Disabled sources are skipped entirely. URL changes apply on the next run. Per-source <span className="mono">reformat</span> overrides live in the Raw JSON tab. The day&apos;s post normally comes from <b>Web research</b>, not these sources; the only thing here that publishes without you is the <span className="mono">queue</span> folder.</p>
       {sources.map((s, i) => {
         const urlKey = s.type === 'folder' ? 'path' : s.profileUrl !== undefined ? 'profileUrl' : 'url';
         return (
@@ -17,6 +17,9 @@ export function Sources({ cfg, update }) {
             <div className="rowsrc-head">
               <div>
                 <span className="mono srclabel">{TYPE_LABEL[s.type] || s.type}</span>
+                {s.type === 'linkedin' && (
+                  <span className="pill warn" title="Your rule: the automation never opens a LinkedIn profile page, not even your own. Turning this source on cannot post — it refuses before Chrome opens.">profile browsing is off — this source cannot run</span>
+                )}
                 <div style={{ marginTop: 3 }}>
                   <Check label="enabled" get={() => s.enabled !== false} set={(v) => update((d) => { d.sources[i].enabled = v; })} />
                 </div>

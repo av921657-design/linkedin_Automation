@@ -24,15 +24,27 @@ export async function POST(request) {
   const entry = {
     at: typeof body.at === 'string' ? body.at.slice(0, 40) : new Date().toISOString(),
     dryRun: Boolean(body.dryRun),
-    result: ['posted', 'failed', 'error', 'nothing', 'auth-paused'].includes(body.result) ? body.result : 'error',
+    result: ['posted', 'failed', 'error', 'nothing', 'auth-paused', 'daily-cap', 'waiting-for-plan', 'no-match', 'retrying', 'busy', 'held'].includes(body.result) ? body.result : 'error',
+    // The autopilot's decision for this wake — which hour it picked and why.
+    plan:
+      body.plan && typeof body.plan === 'object'
+        ? {
+            hour: Number.isInteger(body.plan.hour) && body.plan.hour >= 0 && body.plan.hour <= 23 ? body.plan.hour : null,
+            reason: typeof body.plan.reason === 'string' ? body.plan.reason.slice(0, 200) : null,
+            tz: typeof body.plan.tz === 'string' ? body.plan.tz.slice(0, 64) : null,
+          }
+        : null,
     candidate: typeof body.candidate === 'string' ? body.candidate.slice(0, 120) : null,
     source: typeof body.source === 'string' ? body.source.slice(0, 60) : null,
     error: typeof body.error === 'string' ? body.error.slice(0, 500) : null,
     counts: body.counts && typeof body.counts === 'object' ? {
       postedTotal: Number(body.counts.postedTotal) || 0,
+      postedToday: Number(body.counts.postedToday) || 0,
+      maxPerDay: Number(body.counts.maxPerDay) || 0,
       queue: Number(body.counts.queue) || 0,
       failedDir: Number(body.counts.failedDir) || 0,
       retriesPending: Number(body.counts.retriesPending) || 0,
+      measuredPosts: Number(body.counts.measuredPosts) || 0,
     } : null,
     configVersion: typeof body.configVersion === 'string' ? body.configVersion.slice(0, 12) : null,
     origin: typeof body.origin === 'string' ? body.origin.slice(0, 20) : null,

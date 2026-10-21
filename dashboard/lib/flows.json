@@ -1,0 +1,3663 @@
+{
+ "generatedAt": "2026-10-21T14:32:16.577Z",
+ "total": 59,
+ "fields": [
+  {
+   "id": "it",
+   "label": "IT & data",
+   "accent": "#6ee7b7",
+   "for": "admins, analysts and the person asked about every spreadsheet",
+   "count": 6
+  },
+  {
+   "id": "operations",
+   "label": "Operations & admin",
+   "accent": "#60a5fa",
+   "for": "ops managers, EAs and the person who keeps the process honest",
+   "count": 6
+  },
+  {
+   "id": "content",
+   "label": "Content & design",
+   "accent": "#f0abfc",
+   "for": "writers, designers, video editors and social owners",
+   "count": 4
+  },
+  {
+   "id": "finance",
+   "label": "Finance & accounts",
+   "accent": "#34d399",
+   "for": "accountants, controllers, AP/AR and small-business owners",
+   "count": 4
+  },
+  {
+   "id": "marketing",
+   "label": "Marketing",
+   "accent": "#fbbf24",
+   "for": "brand, growth and social teams with no budget for agencies",
+   "count": 4
+  },
+  {
+   "id": "hr",
+   "label": "People & hiring",
+   "accent": "#a78bfa",
+   "for": "HR generalists, recruiters and people managers",
+   "count": 4
+  },
+  {
+   "id": "education",
+   "label": "Teaching & training",
+   "accent": "#c084fc",
+   "for": "teachers, trainers and course designers",
+   "count": 4
+  },
+  {
+   "id": "everyday",
+   "label": "Everyday life",
+   "accent": "#fda4af",
+   "for": "anyone, at home, tonight, with the phone in their hand",
+   "count": 3
+  },
+  {
+   "id": "project-mgmt",
+   "label": "Projects & delivery",
+   "accent": "#7dd3fc",
+   "for": "PMs, scrum masters and delivery leads",
+   "count": 3
+  },
+  {
+   "id": "supply-chain",
+   "label": "Supply chain",
+   "accent": "#22d3ee",
+   "for": "planners, buyers and anyone holding an open-order report",
+   "count": 3
+  },
+  {
+   "id": "healthcare",
+   "label": "Clinic & care",
+   "accent": "#2dd4bf",
+   "for": "clinic admins, nurses and care coordinators",
+   "count": 2
+  },
+  {
+   "id": "support",
+   "label": "Customer support",
+   "accent": "#4ade80",
+   "for": "support agents, success managers and inbox owners",
+   "count": 2
+  },
+  {
+   "id": "ecommerce",
+   "label": "E-commerce",
+   "accent": "#f472b6",
+   "for": "storefront operators, catalogue and marketplace sellers",
+   "count": 2
+  },
+  {
+   "id": "legal",
+   "label": "Legal & compliance",
+   "accent": "#94a3b8",
+   "for": "paralegals, compliance officers and contract reviewers",
+   "count": 2
+  },
+  {
+   "id": "logistics",
+   "label": "Logistics & delivery",
+   "accent": "#818cf8",
+   "for": "dispatchers, fleet coordinators and last-mile teams",
+   "count": 2
+  },
+  {
+   "id": "manufacturing",
+   "label": "Manufacturing",
+   "accent": "#f59e0b",
+   "for": "production, quality and maintenance on the floor",
+   "count": 2
+  },
+  {
+   "id": "retail",
+   "label": "Retail & field sales",
+   "accent": "#fb7185",
+   "for": "shop managers, territory reps and franchise owners",
+   "count": 2
+  },
+  {
+   "id": "study",
+   "label": "Study & learning",
+   "accent": "#93c5fd",
+   "for": "students, career-changers and the self-taught",
+   "count": 2
+  },
+  {
+   "id": "warehousing",
+   "label": "Warehousing",
+   "accent": "#38bdf8",
+   "for": "store leads, inventory clerks and shift supervisors",
+   "count": 2
+  }
+ ],
+ "allFields": [
+  {
+   "id": "supply-chain",
+   "label": "Supply chain",
+   "accent": "#22d3ee"
+  },
+  {
+   "id": "warehousing",
+   "label": "Warehousing",
+   "accent": "#38bdf8"
+  },
+  {
+   "id": "logistics",
+   "label": "Logistics & delivery",
+   "accent": "#818cf8"
+  },
+  {
+   "id": "manufacturing",
+   "label": "Manufacturing",
+   "accent": "#f59e0b"
+  },
+  {
+   "id": "retail",
+   "label": "Retail & field sales",
+   "accent": "#fb7185"
+  },
+  {
+   "id": "ecommerce",
+   "label": "E-commerce",
+   "accent": "#f472b6"
+  },
+  {
+   "id": "hr",
+   "label": "People & hiring",
+   "accent": "#a78bfa"
+  },
+  {
+   "id": "finance",
+   "label": "Finance & accounts",
+   "accent": "#34d399"
+  },
+  {
+   "id": "marketing",
+   "label": "Marketing",
+   "accent": "#fbbf24"
+  },
+  {
+   "id": "support",
+   "label": "Customer support",
+   "accent": "#4ade80"
+  },
+  {
+   "id": "operations",
+   "label": "Operations & admin",
+   "accent": "#60a5fa"
+  },
+  {
+   "id": "project-mgmt",
+   "label": "Projects & delivery",
+   "accent": "#7dd3fc"
+  },
+  {
+   "id": "education",
+   "label": "Teaching & training",
+   "accent": "#c084fc"
+  },
+  {
+   "id": "healthcare",
+   "label": "Clinic & care",
+   "accent": "#2dd4bf"
+  },
+  {
+   "id": "legal",
+   "label": "Legal & compliance",
+   "accent": "#94a3b8"
+  },
+  {
+   "id": "it",
+   "label": "IT & data",
+   "accent": "#6ee7b7"
+  },
+  {
+   "id": "content",
+   "label": "Content & design",
+   "accent": "#f0abfc"
+  },
+  {
+   "id": "everyday",
+   "label": "Everyday life",
+   "accent": "#fda4af"
+  },
+  {
+   "id": "study",
+   "label": "Study & learning",
+   "accent": "#93c5fd"
+  }
+ ],
+ "cost": "51 of them need nothing at all; the other 8 work on a free tier.",
+ "flows": [
+  {
+   "slug": "email-you-keep-avoiding",
+   "title": "The email you have been avoiding for three days",
+   "job": "A difficult message you know you owe someone",
+   "who": "anyone who owes a difficult message to a client",
+   "field": "operations",
+   "fieldLabel": "Operations & admin",
+   "accent": "#60a5fa",
+   "situation": "A client emailed on Monday and you have read it four times without answering. The tab is still open on your phone at midnight, and every day it sits the reply gets harder to face.",
+   "outcome": "A four-line email, in your own voice, that you can hit send on the second you finish reading it.",
+   "minutes": 5,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Change one detail to sound like you before it goes.",
+   "tools": [
+    "Phone notes",
+    "ChatGPT",
+    "Gmail",
+    "You"
+   ],
+   "arrow": "Phone notes → ChatGPT → ChatGPT → Gmail → You",
+   "prompt": "Turn this into a four-line email to a client. Plain words, no apology theatre, keep the ask clear.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "dump the mess",
+     "do": "Write the whole messy version — what happened, what you want, what you are afraid of saying.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "ask for 4 lines",
+     "do": "Paste it and type: \"Turn this into a four-line email to a client. Plain words, no apology theatre, keep the ask clear.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "lose the grovel",
+     "do": "If it came back too soft or too stiff, type: \"Rewrite it so I apologise only once and still sound like I mean it.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "paste, rename",
+     "do": "Paste the draft, put the real name and the real date back in.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "read once",
+     "do": "Read it out loud once. If it sounds like you, send it.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "meeting-to-actions",
+   "title": "An hour-long meeting into five action items",
+   "job": "Nobody remembers what was decided",
+   "who": "the person who has to send the recap after a meeting nobody else owned",
+   "field": "project-mgmt",
+   "fieldLabel": "Projects & delivery",
+   "accent": "#7dd3fc",
+   "situation": "An hour of talk, five people on the call, and by the end nobody can say what they each owe. You scribbled fragments while you should have been listening, and now the recap has to come from you.",
+   "outcome": "A short recap in the room’s thread — decisions made, owners named, open questions flagged — with a subject line that invites correction.",
+   "minutes": 8,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never record other people without telling them. Notes from your own words are safer.",
+   "tools": [
+    "Phone notes",
+    "Claude",
+    "You",
+    "Gmail",
+    "Google Calendar"
+   ],
+   "arrow": "Phone notes → Claude → You → Gmail → Google Calendar",
+   "prompt": "Turn these into decisions made, actions with owners, and anything still undecided.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "jot as you go",
+     "do": "During the meeting, type fragments: names, numbers, decisions. Speed beats grammar.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "make it a list",
+     "do": "Paste the fragments: \"Turn these into decisions made, actions with owners, and anything still undecided.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "fix owners and dates",
+     "do": "Read every action back and check the owner is a real named person and the date is real — not \"the team\" or \"soon\".",
+     "type": "check"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "send the recap",
+     "do": "Send it to the room with the subject line \"What we decided — correct me if wrong\".",
+     "type": "do"
+    },
+    {
+     "tool": "Google Calendar",
+     "chip": "slot the actions",
+     "do": "Put every action that has a date into your calendar as an event or task, so it is not just a line in an email you will archive.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "document-in-ten-minutes",
+   "title": "Read a 40-page document without reading it",
+   "job": "A contract, a report or a policy you have to understand",
+   "who": "anyone about to sign or refuse a long document they have not read",
+   "field": "operations",
+   "fieldLabel": "Operations & admin",
+   "accent": "#60a5fa",
+   "situation": "A forty-page contract or policy lands in your inbox with a signature due Friday. You do not have two calm hours, but you still need to know exactly what it commits you to before you touch it.",
+   "outcome": "A one-page note in your own words: the clauses that change what you have to do, their page numbers, and the lines you must still read yourself.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "A summary is not advice. For a contract, still read the money and the dates yourself.",
+   "tools": [
+    "Claude",
+    "ChatGPT",
+    "You",
+    "Google Docs"
+   ],
+   "arrow": "Claude → ChatGPT → You → Google Docs",
+   "prompt": "List the clauses that change what I have to do, with page numbers.",
+   "steps": [
+    {
+     "tool": "Claude",
+     "chip": "paste the file",
+     "do": "Attach or paste the document, then ask: \"List the clauses that change what I have to do, with page numbers.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "argue the other side",
+     "do": "Ask the same question of a second model. Where they disagree is where you must actually read.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "read money and dates",
+     "do": "Open the pages they both flagged and read the payment, the dates and the exit clause with your own eyes. No summary signs a contract for you.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write your notes",
+     "do": "Paste both answers into a doc and mark only the lines you now understand well enough to sign or refuse.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "learn-anything-weekend",
+   "title": "Learn a new subject in one evening, with sources",
+   "job": "You keep hearing a term and nodding along",
+   "who": "a student or career-changer meeting a term they keep nodding along to",
+   "field": "study",
+   "fieldLabel": "Study & learning",
+   "accent": "#93c5fd",
+   "situation": "Everyone keeps saying the word and you smile so nobody notices you do not know it. It is your evening now, and you would rather understand it once, with real sources you can trust, than fake it again on Monday.",
+   "outcome": "Five lines you can still recall tomorrow morning, and the two or three sources each one came from.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Ask for links, then open one. A model that cites nothing is guessing.",
+   "tools": [
+    "Perplexity",
+    "NotebookLM",
+    "ChatGPT",
+    "You",
+    "Google Keep"
+   ],
+   "arrow": "Perplexity → NotebookLM → ChatGPT → You → Google Keep",
+   "prompt": "Test me with five questions, one at a time, and tell me where I am wrong.",
+   "steps": [
+    {
+     "tool": "Perplexity",
+     "chip": "ask with links",
+     "do": "Type the question a beginner would ask, and read the cited sources it returns.",
+     "type": "do"
+    },
+    {
+     "tool": "NotebookLM",
+     "chip": "upload the best one",
+     "do": "Paste or upload the two sources you trust most and ask it for the differences between them.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "quiz me",
+     "do": "Say: \"Test me with five questions, one at a time, and tell me where I am wrong.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "mark what you missed",
+     "do": "Score yourself before you read its answers. The ones you flubbed are the ones to re-open — not the ones you already knew.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "five lines",
+     "do": "Write five lines you can still remember tomorrow. Those are the ones you learned.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "fix-what-you-ate",
+   "title": "What is in the fridge, turned into tonight’s dinner",
+   "job": "Food waste and the daily \"what do I cook\" blank",
+   "who": "anyone standing at an open fridge with no plan for tonight",
+   "field": "everyday",
+   "fieldLabel": "Everyday life",
+   "accent": "#fda4af",
+   "situation": "It is nearly six, you are tired, and the spinach at the back is going brown. There is real food in there that will be rubbish by Thursday unless something cooks it tonight.",
+   "outcome": "Tonight’s dinner chosen, and the two or three things you are missing already on a short list you can send yourself.",
+   "minutes": 5,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "A model cannot see if meat is off. Your nose still decides.",
+   "tools": [
+    "Phone notes",
+    "Gemini",
+    "You",
+    "Google Keep",
+    "WhatsApp"
+   ],
+   "arrow": "Phone notes → Gemini → You → Google Keep → WhatsApp",
+   "prompt": "Three dinners from these, under 30 minutes, one of them no-cook. Tell me what to throw away first.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "list it fast",
+     "do": "Type what is in the fridge and cupboard, roughly — \"2 eggs, spinach nearly dead, paneer\".",
+     "type": "do"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "three options",
+     "do": "Ask: \"Three dinners from these, under 30 minutes, one of them no-cook. Tell me what to throw away first.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "trust your nose",
+     "do": "Overrule the model on anything fresh — meat, dairy, the leftovers at the back. If it smells or looks off, bin it whatever it suggests.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "shop list",
+     "do": "Ask it for the two or three things you are actually missing and keep that as the list.",
+     "type": "do"
+    },
+    {
+     "tool": "WhatsApp",
+     "chip": "send the list",
+     "do": "Text the short shopping list to yourself or the household group, so you buy the two missing things on the way home.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "paperwork-to-sheet",
+   "title": "A stack of bills into one spreadsheet you can read",
+   "job": "Money going out of a house or a small shop",
+   "who": "a household or small shop owner with a pile of bills and no totals",
+   "field": "finance",
+   "fieldLabel": "Finance & accounts",
+   "accent": "#34d399",
+   "situation": "A drawer or inbox of invoices and receipts, and month-end asking where it all went. Every number is there on paper, scattered and useless, until it is one table you can actually read.",
+   "outcome": "A single spreadsheet with each bill as a row — date, vendor, amount, category — and the category totals you were guessing at.",
+   "minutes": 20,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never paste bank logins or full card numbers. Amount, date and vendor are enough.",
+   "tools": [
+    "Google Lens",
+    "ChatGPT",
+    "Google Sheets",
+    "You"
+   ],
+   "arrow": "Google Lens → ChatGPT → Google Sheets → Google Sheets → You",
+   "prompt": "Turn these into a table with Date, Vendor, Amount, Category. Nothing else.",
+   "steps": [
+    {
+     "tool": "Google Lens",
+     "chip": "photo to text",
+     "do": "Point the camera app (or lens.google.com) at each bill and copy the text it lifts out.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "make it a table",
+     "do": "Paste the text: \"Turn these into a table with Date, Vendor, Amount, Category. Nothing else.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "paste it in",
+     "do": "Paste the table, then use the formula bar to sum the columns you care about.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "sort by category",
+     "do": "Sort or filter the rows by Category so you can see where the money really leaks, not just the grand total.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check three",
+     "do": "Match three random rows against the paper. That spot-check is the whole safety step.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "first-draft-anything",
+   "title": "Kill the blank page for anything you have to write",
+   "job": "Reports, proposals, cover letters, posts",
+   "who": "anyone facing a blank page they have to hand in",
+   "field": "content",
+   "fieldLabel": "Content & design",
+   "accent": "#f0abfc",
+   "situation": "A report, proposal or cover letter is due and the page is still blank because you cannot see where to begin. The words always come easier once there is something wrong on the screen to correct.",
+   "outcome": "A finished first draft in your own order, in your own opinion, trimmed of filler and ready to send or edit.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Ask for structure first, prose second — otherwise it writes your opinion for you.",
+   "tools": [
+    "Claude",
+    "Phone notes",
+    "You"
+   ],
+   "arrow": "Claude → Phone notes → Claude → Claude → You",
+   "prompt": "Use only my bullets and my order, and do not add any opinion I did not write.",
+   "steps": [
+    {
+     "tool": "Claude",
+     "chip": "headings only",
+     "do": "Describe the reader and the goal, and ask for headings only — no paragraphs yet.",
+     "type": "ask"
+    },
+    {
+     "tool": "Phone notes",
+     "chip": "bullets under each",
+     "do": "Put your own facts and opinions as rough bullets under each heading. This is the part only you can do.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "now write it",
+     "do": "Write using only your bullets, keeping your order — type: \"Use only my bullets and my order, and do not add any opinion I did not write.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "fix the opening",
+     "do": "The first line is usually throat-clearing. Select just that line and type: \"Rewrite only the opening so it starts with the most important fact.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "cut a fifth",
+     "do": "Delete the adjectives and any sentence you would not say out loud.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "web-page-noise-to-summary",
+   "title": "Turn a page full of ads into the four paragraphs",
+   "job": "Articles that bury the answer under a recipe and a pop-up",
+   "who": "anyone trying to pull one fact out of an ad-choked page",
+   "field": "study",
+   "fieldLabel": "Study & learning",
+   "accent": "#93c5fd",
+   "situation": "You clicked in for a single answer and got a cookie banner, a pop-up, and three paragraphs about the writer’s childhood before the point. The fact you need is in there somewhere.",
+   "outcome": "The four sentences that actually answer your question, and the one source link you can open before you repeat it.",
+   "minutes": 5,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "If the page matters, open the original source it quotes. Summaries inherit lies.",
+   "tools": [
+    "Chrome",
+    "Gemini",
+    "You",
+    "Google Keep"
+   ],
+   "arrow": "Chrome → Chrome → Gemini → You → Google Keep",
+   "prompt": "What does this page actually say, and what is filler?",
+   "steps": [
+    {
+     "tool": "Chrome",
+     "chip": "open the page",
+     "do": "Load the article the normal way.",
+     "type": "do"
+    },
+    {
+     "tool": "Chrome",
+     "chip": "copy the real text",
+     "do": "If the page is a wall of ads, click the article body, copy it, and drop the raw text into the chat so you are summarising words, not banners.",
+     "type": "do"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "side panel asks",
+     "do": "Open the side panel and ask: \"What does this page actually say, and what is filler?\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "check the claim",
+     "do": "If you are going to repeat the fact, open one of its sources first.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "keep the four lines",
+     "do": "Paste the short summary and its source link into a note, so you can cite it tomorrow instead of reopening the page.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "photo-to-caption",
+   "title": "Photos you took into a post people actually read",
+   "job": "Shop products, event pictures, travel photos with nothing written",
+   "who": "a shop, event or travel photographer with photos and no words",
+   "field": "content",
+   "fieldLabel": "Content & design",
+   "accent": "#f0abfc",
+   "situation": "You shot the products, the table, the venue — and the photos sit in your camera roll with nothing written, while the post you promised goes out tonight. Naming what is in the frame is easy; making someone care is not.",
+   "outcome": "One finished caption, in your voice, checked for real names and places, posted beside the photo.",
+   "minutes": 6,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Check names and places. A model will happily invent a neighbourhood.",
+   "tools": [
+    "ChatGPT",
+    "Claude",
+    "You",
+    "LinkedIn"
+   ],
+   "arrow": "ChatGPT → Claude → You → LinkedIn",
+   "prompt": "Write three captions for this photo: one plain, one warm, one short enough to sit under it.",
+   "steps": [
+    {
+     "tool": "ChatGPT",
+     "chip": "upload the photo",
+     "do": "Attach the picture and say who will read the caption and where it goes.",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "three versions",
+     "do": "Ask for three tones: plain, warm, and one line that fits under a photo — type: \"Write three captions for this photo: one plain, one warm, one short enough to sit under it.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "check names and places",
+     "do": "Confirm every name, price and place against what you actually know. A model will invent a neighbourhood to sound specific.",
+     "type": "check"
+    },
+    {
+     "tool": "LinkedIn",
+     "chip": "post the best",
+     "do": "Pick one, fix any detail it got wrong, and post with the photo.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "voice-note-to-clean-text",
+   "title": "Talk for ten minutes, get usable text back",
+   "job": "Ideas that die because typing them takes too long",
+   "who": "anyone whose best ideas arrive out loud, not typed",
+   "field": "content",
+   "fieldLabel": "Content & design",
+   "accent": "#f0abfc",
+   "situation": "You thought clearly for ten minutes in the car and said nothing you can find now. Typing it out would take an hour, so the recording sat in the app and the idea is already fading.",
+   "outcome": "A clean readable version of what you said — bullets and one short paragraph — saved beside the raw transcript so nothing you said is lost.",
+   "minutes": 7,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Dictate in a private room — that mic is always the risk, not the model.",
+   "tools": [
+    "Google Keep",
+    "ChatGPT",
+    "You",
+    "Google Docs"
+   ],
+   "arrow": "Google Keep → ChatGPT → You → Google Docs",
+   "prompt": "Remove filler, keep my meaning, give me bullet points and one short paragraph.",
+   "steps": [
+    {
+     "tool": "Google Keep",
+     "chip": "record freely",
+     "do": "Press the mic and talk unstructured, including the parts you cross out.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "make it readable",
+     "do": "Paste the transcript: \"Remove filler, keep my meaning, give me bullet points and one short paragraph.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "fix the garbled bit",
+     "do": "Play back the two or three words the transcript mangled — names, numbers, anything you mumbled — and fix them before this becomes the clean version.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "save the version",
+     "do": "Keep the clean version next to the raw transcript so nothing you said is lost.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "small-talk-to-brief",
+   "title": "A five-minute brief before you walk into anyone’s office",
+   "job": "A meeting with a person you know nothing about",
+   "who": "anyone about to meet a person they know nothing about",
+   "field": "operations",
+   "fieldLabel": "Operations & admin",
+   "accent": "#60a5fa",
+   "situation": "In twenty minutes you are in front of someone whose name you only just read — a new client, a director, a friend of a friend. Walking in cold is the whole dread of the meeting.",
+   "outcome": "One opening question you can actually remember, grounded in something real about them and their company.",
+   "minutes": 6,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Public facts only. Do not ask a model to describe a private individual.",
+   "tools": [
+    "Perplexity",
+    "Claude",
+    "You",
+    "Phone notes"
+   ],
+   "arrow": "Perplexity → Claude → You → Phone notes",
+   "prompt": "Give me three questions that show I did the reading.",
+   "steps": [
+    {
+     "tool": "Perplexity",
+     "chip": "what is public",
+     "do": "Ask for their company’s recent public announcements and the role they hold.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "three questions",
+     "do": "Paste what came back: \"Give me three questions that show I did the reading.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "drop the fake ones",
+     "do": "Cross off any question that only proves you googled them, and any fact you could not say out loud without wincing. Keep the one you would genuinely ask.",
+     "type": "check"
+    },
+    {
+     "tool": "Phone notes",
+     "chip": "one line",
+     "do": "Write the one question you will actually ask. Nobody remembers three.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "spreadsheet-without-formulas",
+   "title": "Ask a spreadsheet in English, get the answer",
+   "job": "A table you cannot analyse because you do not know formulas",
+   "who": "anyone handed a big spreadsheet they cannot query",
+   "field": "it",
+   "fieldLabel": "IT & data",
+   "accent": "#6ee7b7",
+   "situation": "A dump of rows lands on you — costs, signups, shipments — and you are meant to answer one question about it, but you do not know a single formula. The file is not the scary part; the blank formula bar is.",
+   "outcome": "The answer in plain English, and the one formula pasted into a live cell so next month it recalculates without you.",
+   "minutes": 8,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Redact names and IDs before pasting a table. The file leaves your machine at the paste.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → You → Google Sheets",
+   "prompt": "Which month cost the most, and what formula works this out on its own next month?",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "clean the column",
+     "do": "Delete any column a stranger should not see, then copy the rows.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "ask in English",
+     "do": "Paste and ask: \"Which month cost the most, and what formula works this out on its own next month?\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "test one cell",
+     "do": "Check one cell by hand against a number you already know. A formula that quietly adds the wrong column looks exactly like one that works.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "paste the formula",
+     "do": "Put the formula in the cell so the answer updates when next month’s number lands.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "one-page-explainer",
+   "title": "A confusing thing explained on one picture",
+   "job": "Explaining your process to a new joiner or a client",
+   "who": "a trainer or team lead explaining a process to someone new",
+   "field": "education",
+   "fieldLabel": "Teaching & training",
+   "accent": "#c084fc",
+   "situation": "A new joiner, a client or your own boss needs to understand how the thing works — and every time you say it out loud it comes out in a tangle. They need one picture, not another meeting.",
+   "outcome": "A single diagram — boxes and arrows with the words inside — that one stranger can follow without you standing there.",
+   "minutes": 20,
+   "cost": "free-tier",
+   "costLabel": "Free tier",
+   "payers": [
+    "Canva"
+   ],
+   "guard": "If it needs a legend to be understood, redraw it with fewer boxes.",
+   "tools": [
+    "Claude",
+    "Canva",
+    "You",
+    "Google Docs"
+   ],
+   "arrow": "Claude → Canva → You → Canva → Google Docs",
+   "prompt": "boxes, arrows, and the words inside each box",
+   "steps": [
+    {
+     "tool": "Claude",
+     "chip": "boxes and arrows",
+     "do": "Describe the process and ask for \"boxes, arrows, and the words inside each box\" — a layout, not an essay.",
+     "type": "ask"
+    },
+    {
+     "tool": "Canva",
+     "chip": "build the boxes",
+     "do": "Use a flowchart or diagram template and drop the words in. Free templates are enough.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "test on a human",
+     "do": "Show it to one person who has never done the job. Ask where they got lost.",
+     "type": "check"
+    },
+    {
+     "tool": "Canva",
+     "chip": "redraw where stuck",
+     "do": "Where your tester stalled, cut a box or add one, then redraw. The second version is the one that works without you.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "save and share it",
+     "do": "Export the diagram and drop it where the next new person will find it — the shared doc or onboarding page, not your desktop.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "reply-to-comments",
+   "title": "Answer every comment on your post without three hours",
+   "job": "You posted, people replied, and now the replies pile up",
+   "who": "a social owner whose post took off and the replies are piling up",
+   "field": "marketing",
+   "fieldLabel": "Marketing",
+   "accent": "#fbbf24",
+   "situation": "You posted, it landed, and now forty comments need a real answer. Ignoring them is how a good post dies; answering each by hand is your whole afternoon gone.",
+   "outcome": "Every comment answered in your own voice, plus one human line you added yourself at the end of the thread.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never let a model answer a complaint about money or a legal threat. Those are yours.",
+   "tools": [
+    "Phone notes",
+    "ChatGPT",
+    "You",
+    "LinkedIn"
+   ],
+   "arrow": "Phone notes → ChatGPT → You → LinkedIn",
+   "prompt": "Answer each comment in this voice, one or two lines, and leave any that needs a real person for me.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "copy the replies",
+     "do": "Paste the comments that need an answer, one per line.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "draft in your tone",
+     "do": "Paste one of your old replies as an example, then ask for short answers in that voice — type: \"Answer each comment in this voice, one or two lines, and leave any that needs a real person for me.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "pull the risky ones",
+     "do": "Take by hand any comment about money, a refund or a complaint — never let a draft answer those — and read each reply once before it posts.",
+     "type": "check"
+    },
+    {
+     "tool": "LinkedIn",
+     "chip": "send, then one more",
+     "do": "Post the replies, then add one human sentence to the thread yourself.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "local-model-offline",
+   "title": "A model on your own laptop for things you will not upload",
+   "job": "Therapy notes, family matters, a client list you must not leak",
+   "who": "anyone with notes too private to paste into a chatbot",
+   "field": "it",
+   "fieldLabel": "IT & data",
+   "accent": "#6ee7b7",
+   "situation": "Therapy notes, a family matter, a client list you are not allowed to leak — yet the only model that helps is the one you cannot trust with them. You want something that never touches the internet.",
+   "outcome": "A small model answering on your own laptop with no network, and a clear line drawn between what goes there and what goes online.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Any laptop from the last five years runs a small model. Do not buy hardware to start.",
+   "tools": [
+    "Your own laptop",
+    "HuggingChat",
+    "You"
+   ],
+   "arrow": "Your own laptop → Your own laptop → Your own laptop → HuggingChat → You",
+   "prompt": "Summarise these meeting notes into three action points.",
+   "steps": [
+    {
+     "tool": "Your own laptop",
+     "chip": "install one thing",
+     "do": "Download Ollama from ollama.com — one installer, no account.",
+     "type": "do"
+    },
+    {
+     "tool": "Your own laptop",
+     "chip": "pull a small model",
+     "do": "Open the terminal that came with the install and run: ollama run llama3.2:3b.",
+     "type": "do"
+    },
+    {
+     "tool": "Your own laptop",
+     "chip": "ask it privately",
+     "do": "With the Wi-Fi off, type the thing you would never upload, such as: \"Summarise these meeting notes into three action points.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "HuggingChat",
+     "chip": "compare",
+     "do": "Ask the same private question on HuggingChat and on the local model, then notice which one you would trust.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "keep private here",
+     "do": "Decide now which kind of note only ever goes to the local one.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "two-week-plan-not-a-promise",
+   "title": "A goal turned into the next two weeks only",
+   "job": "A resolution you wrote in January and forgot by February",
+   "who": "anyone with a goal they wrote down and quietly dropped",
+   "field": "everyday",
+   "fieldLabel": "Everyday life",
+   "accent": "#fda4af",
+   "situation": "You wrote the goal down with real intention and it has not moved since. A twelve-month plan feels honest in January and impossible by February, so you never start at all.",
+   "outcome": "A dated fourteen-day plan with at most three actions a day, already sitting as events in your calendar.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "If the plan has more than three actions a day, it is a wish. Delete half.",
+   "tools": [
+    "ChatGPT",
+    "Google Calendar",
+    "You",
+    "Gemini"
+   ],
+   "arrow": "ChatGPT → Google Calendar → You → Gemini → Google Calendar",
+   "prompt": "Here is what I actually did — which two things should I stop trying?",
+   "steps": [
+    {
+     "tool": "ChatGPT",
+     "chip": "make it two weeks",
+     "do": "State the goal and your real weekly hours, then ask for a 14-day plan, three actions a day maximum.",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Calendar",
+     "chip": "block the time",
+     "do": "Put the actions in as events. A plan with no slot in it is a wish.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "keep only doable",
+     "do": "Sweep the two weeks and delete any action you already know you will skip. A plan you keep half of beats a plan you abandon whole.",
+     "type": "check"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "review on day 7",
+     "do": "On day seven ask: \"Here is what I actually did — which two things should I stop trying?\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Calendar",
+     "chip": "book day 7 review",
+     "do": "Put the day-seven review in the calendar now, as its own event, or you will never run it.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "video-explainer-free",
+   "title": "A written script into a short explainer clip",
+   "job": "Explaining one thing about your product or your work",
+   "who": "a founder or creator explaining one thing about their product",
+   "field": "content",
+   "fieldLabel": "Content & design",
+   "accent": "#f0abfc",
+   "situation": "You need one short video to explain your product, and hiring someone for it is not happening this month. You can write, you can talk — you just cannot edit video from nothing.",
+   "outcome": "A finished short clip with burned-in captions, exported to your phone or laptop, ready to post.",
+   "minutes": 20,
+   "cost": "free-tier",
+   "costLabel": "Free tier",
+   "payers": [
+    "Canva",
+    "CapCut"
+   ],
+   "guard": "Free exports carry a watermark or a length cap until you outgrow them — that is fine for a first one.",
+   "tools": [
+    "Claude",
+    "Phone notes",
+    "Canva",
+    "CapCut",
+    "You"
+   ],
+   "arrow": "Claude → Phone notes → Canva → CapCut → You",
+   "prompt": "Write a 60-second explainer script, each line with the shot beside it, plain words, no hype.",
+   "steps": [
+    {
+     "tool": "Claude",
+     "chip": "60-second script",
+     "do": "Describe the thing and ask for a 60-second script with the visual noted beside each line — type: \"Write a 60-second explainer script, each line with the shot beside it, plain words, no hype.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Phone notes",
+     "chip": "read the script back",
+     "do": "Read the script out loud once. Anywhere you stumble, shorten the line now, before it costs you a whole take.",
+     "type": "do"
+    },
+    {
+     "tool": "Canva",
+     "chip": "draw the frames",
+     "do": "Turn the visual column into slides or stock clips — the free assets are enough for a first video.",
+     "type": "do"
+    },
+    {
+     "tool": "CapCut",
+     "chip": "cut and caption",
+     "do": "Import, let it auto-caption, and cut anything longer than four seconds without a change on screen.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "watch with no sound",
+     "do": "Play it with the sound off. If you cannot follow it on captions alone, the message is not in the pictures yet.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "code-you-dont-ship",
+   "title": "A tiny script for the chore you do every Friday",
+   "job": "Renaming files, splitting a list, moving rows between sheets",
+   "who": "anyone who does the same fiddly computer chore every week",
+   "field": "it",
+   "fieldLabel": "IT & data",
+   "accent": "#6ee7b7",
+   "situation": "Every Friday you rename the same hundred files, or move the same rows from one sheet to another, by hand. You know a script would do it in seconds, but you do not write code.",
+   "outcome": "A saved script with a name you will recognise next Friday, proven to work on a copy of your files.",
+   "minutes": 20,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Run it on a copy of your files, never the originals. That is the entire risk.",
+   "tools": [
+    "ChatGPT",
+    "Your own laptop",
+    "You"
+   ],
+   "arrow": "ChatGPT → ChatGPT → Your own laptop → ChatGPT → You",
+   "prompt": "Will this ever overwrite or delete my original files? If so, change it so it only works on a copy.",
+   "steps": [
+    {
+     "tool": "ChatGPT",
+     "chip": "describe the chore",
+     "do": "Say what the folder looks like and what it should look like after, and ask for a script plus how to run it.",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "safety check",
+     "do": "Before running it, type: \"Will this ever overwrite or delete my original files? If so, change it so it only works on a copy.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Your own laptop",
+     "chip": "copy first",
+     "do": "Make a copy of the folder, then run the script on the copy only.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "paste the error",
+     "do": "When it errors, paste the whole error back and ask what to change. Never accept \"try again\".",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "keep it",
+     "do": "Save the working script with a name you will recognise next Friday.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "interview-before-you-go",
+   "title": "Practise the interview you are about to sit",
+   "job": "A role you want and no one to rehearse with",
+   "who": "a job seeker about to sit an interview alone",
+   "field": "hr",
+   "fieldLabel": "People & hiring",
+   "accent": "#a78bfa",
+   "situation": "The interview is on Thursday and there is nobody around to practise with. You can feel yourself rambling already, and the silence after each question is exactly where you will lose it.",
+   "outcome": "Three rehearsed stories with real numbers behind them, and a short list of the weak answers you still have to fix.",
+   "minutes": 20,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "A model over-praises. Ask for the harsh version explicitly.",
+   "tools": [
+    "Perplexity",
+    "Claude",
+    "Google Keep",
+    "You"
+   ],
+   "arrow": "Perplexity → Claude → Claude → Google Keep → You",
+   "prompt": "Be harsher. Tell me which answers are weak, where I rambled, and what they really worry you did not cover.",
+   "steps": [
+    {
+     "tool": "Perplexity",
+     "chip": "what they care about",
+     "do": "Read the job post and the company’s last six months of news, and write down the three things they keep repeating.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "interrogate me",
+     "do": "Paste those three and ask it to interview you, one question at a time, and grade each answer out of ten.",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "go easy on me",
+     "do": "When it is too kind, type: \"Be harsher. Tell me which answers are weak, where I rambled, and what they really worry you did not cover.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "three stories",
+     "do": "Keep three real examples from your work, with the number that proves each one.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "say the weak one aloud",
+     "do": "Say your lowest-scored answer out loud once more. If it still rambles, cut it to three sentences before Thursday.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "translate-for-a-relative",
+   "title": "A letter in another language, explained to your family",
+   "job": "Official post, a school note, a form you must fill",
+   "who": "anyone translating official post for a parent or relative",
+   "field": "everyday",
+   "fieldLabel": "Everyday life",
+   "accent": "#fda4af",
+   "situation": "An official letter arrived in a language your mother does not read, and she has been holding it, worried, all week. You need to explain it in her words and answer it — not just get a literal translation.",
+   "outcome": "The letter understood in your own language, a polite reply drafted in theirs, and the real deadline and reference checked against the paper.",
+   "minutes": 6,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "For anything legal, get the official translation too. This is for understanding, not for filing.",
+   "tools": [
+    "ChatGPT",
+    "Gemini",
+    "You"
+   ],
+   "arrow": "ChatGPT → ChatGPT → Gemini → You",
+   "prompt": "Now explain what this means to me in five plain sentences — who wants what, by when, and what happens if we ignore it.",
+   "steps": [
+    {
+     "tool": "ChatGPT",
+     "chip": "photo of the letter",
+     "do": "Upload the picture and ask what it says in your own language, plus the deadline inside it.",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "plain words for her",
+     "do": "Type: \"Now explain what this means to me in five plain sentences — who wants what, by when, and what happens if we ignore it.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "reply in their tone",
+     "do": "Draft the response, then ask it to rewrite politely in the official language.",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "confirm the date",
+     "do": "Check the date and the reference number against the paper before anything is sent.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "four-quotes-into-one-comparison",
+   "title": "Four supplier quotes in four formats into one table you can defend",
+   "job": "The same part priced four different ways by four different people",
+   "who": "buyers holding a stack of quote PDFs and one frightened spreadsheet",
+   "field": "supply-chain",
+   "fieldLabel": "Supply chain",
+   "accent": "#22d3ee",
+   "situation": "Everyone sends it their own way. One quotes per thousand with freight inside it, one quotes ex-works with a four-week lead, one sends a number and nothing else. You cannot choose until they sit side by side, and re-typing them takes the morning.",
+   "outcome": "One row per quote in the same columns, the maths shown underneath, and the two lines you send your manager saying which one you would take and what it costs you in lead time.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Every price, currency and date comes off the real quote, never from the model or from memory. Strip supplier and contact names before you paste if that pricing is confidential to them. Unit, currency, Incoterm and minimum order get read back with your own eyes.",
+   "tools": [
+    "Google Sheets",
+    "Chrome",
+    "ChatGPT",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Google Sheets → Chrome → ChatGPT → Claude → You",
+   "prompt": "Rewrite this as one table normalised to delivered cost per single unit inside 30 days. Show the maths you used for each row. List the terms that are missing and do not guess at them.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "one column per quote",
+     "do": "Make a row per supplier with headers only: unit price, currency, minimum order, lead time, freight, valid until. Leave every cell empty — filling them is the next step.",
+     "type": "do"
+    },
+    {
+     "tool": "Chrome",
+     "chip": "open each quote",
+     "do": "Open each quote and copy its terms into your row exactly as written, including the odd price breaks. Take the supplier names out while you are in there.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "put them on one scale",
+     "do": "Paste the rows and type: \"Rewrite this as one table normalised to delivered cost per single unit inside 30 days. Show the maths you used for each row. List the terms that are missing and do not guess at them.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "write the two lines",
+     "do": "Paste its table with your real prices beside it and ask: \"Two sentences for my manager: which quote to take, what I am trading away to get it, and the one question to put to the runner-up.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "read the numbers back",
+     "do": "Cover the model’s answer and read each price, currency and lead time out of the original quote one more time. One slipped decimal turns the whole table into a rumour.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "late-delivery-history-into-two-names",
+   "title": "Twenty rows of late receipts into the two suppliers to chase",
+   "job": "The overdue report everybody complains about and nobody acts on",
+   "who": "planners who chase whoever emailed last instead of whoever is worst",
+   "field": "supply-chain",
+   "fieldLabel": "Supply chain",
+   "accent": "#22d3ee",
+   "situation": "You can export every late receipt for the quarter, and it is a wall. It always feels like everything is late, so the crew spends the day firefighting whoever shouted loudest this morning. Thirty rows in a paste box ends that argument.",
+   "outcome": "A ranked shortlist of the suppliers actually costing you days, the pattern behind each one, and the two emails you send before standup.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Paste twenty or thirty rows, not the whole quarter, and strip supplier names if that data is not yours to upload. The grouping is a rough read: check the dates and the count in the sheet yourself before you name anyone to your boss.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Google Sheets → Google Sheets → ChatGPT → Claude → You",
+   "prompt": "Group these by supplier. For each one give me total days lost, whether this is a one-off or the same thing every month, and one sentence saying what the pattern points at. No advice yet.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "copy thirty rows",
+     "do": "Open the overdue export and copy only the columns anyone ever asks about: item, original promised date, latest promised date, days late, plant.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "clear the small stuff",
+     "do": "Delete the rows you have already closed and the one-day slips nobody is late because of. What is left should be the receipts that actually hurt.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "who is really late",
+     "do": "Paste the remaining rows and type: \"Group these by supplier. For each one give me total days lost, whether this is a one-off or the same thing every month, and one sentence saying what the pattern points at. No advice yet.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "write the two chases",
+     "do": "Paste your two worst suppliers back in: \"Write one short email to each. State the item, the date I need it on site, and ask for a confirmed ship date. No apologies and no threats.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "check the dates",
+     "do": "Match every item, order number and date in those emails against the live report, and send only the lines that still say open.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "end-of-life-part-into-a-shortlist",
+   "title": "A part on allocation into three substitutes and one good question",
+   "job": "The component your supplier just said is twelve weeks out",
+   "who": "planners told a part is end-of-life or allocated, with a build on Thursday",
+   "field": "supply-chain",
+   "fieldLabel": "Supply chain",
+   "accent": "#22d3ee",
+   "situation": "The notification lands and you have no idea what else exists. Engineering are the only people who know the spec and they are in a review until three, so you spend the morning opening datasheets you cannot read properly and pretending to.",
+   "outcome": "Three candidate substitutes in one table with the specs that genuinely differ, and one three-line question to engineering that gets answered between meetings.",
+   "minutes": 18,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "A model matching numbers on a datasheet is not an approval. Anything touching a qualified part, a safety-critical assembly or a customer drawing goes to engineering, and their sign-off is what you record — not this shortlist.",
+   "tools": [
+    "Chrome",
+    "Perplexity",
+    "Claude",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Chrome → Perplexity → Claude → Google Docs → You",
+   "prompt": "Which other manufacturers make something in this footprint and rating? Give me part numbers and a link to each datasheet, and say where you are unsure.",
+   "steps": [
+    {
+     "tool": "Chrome",
+     "chip": "open the datasheet",
+     "do": "Find the original datasheet and copy out the four numbers a substitute has to match: body size, rating, tolerance, temperature range.",
+     "type": "do"
+    },
+    {
+     "tool": "Perplexity",
+     "chip": "who else makes this",
+     "do": "Type the part number and ask: \"Which other manufacturers make something in this footprint and rating? Give me part numbers and a link to each datasheet, and say where you are unsure.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "where they differ",
+     "do": "Paste your four numbers and the text of each candidate: \"Put these in one table and list only the specs that do not match. Say plainly which differences would need a test before we could use it.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "ask engineering",
+     "do": "Paste the table at the top of a doc and write one question under it: which of these differences we can live with, and what it would take to prove it. Keep it under three lines.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check the links",
+     "do": "Open each datasheet yourself and confirm the part number and the ratings before you send anything. A model will invent a plausible component nobody makes.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "receiving-backlog-into-an-order-of-work",
+   "title": "A receiving backlog into the four trucks to work first",
+   "job": "Nine inbound loads and two people on the dock",
+   "who": "shift leads and inventory clerks facing a queue of inbound",
+   "field": "warehousing",
+   "fieldLabel": "Warehousing",
+   "accent": "#38bdf8",
+   "situation": "Everything landed at the same time again. Half of it can sweat in the yard; half of it is the pick face that will be empty by two o’clock and stop the pickers. The manifest does not tell you which is which, so the crew starts at the front of the queue and you find out at four.",
+   "outcome": "A numbered order of work for the dock — which door, which load, what can wait — written where everyone can read it, with room for what changes by lunch.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Quantities and locations come off the real manifest; the model only helps you rank, and it will invent a truck that never departed. Anything with a temperature, safety or delivery deadline you decide yourself.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Gemini",
+    "Google Keep",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Gemini → Google Keep → You",
+   "prompt": "Order these by what will cost me the most in the next six hours. Put the reason in brackets after each line and keep it to a numbered list.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "paste today inbound",
+     "do": "Copy the inbound list into a sheet with three columns: what is on the load, where it is going, and whether the pick face for that item is already low.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "what stops the floor",
+     "do": "Paste the rows and type: \"Order these by what will cost me the most in the next six hours. Put the reason in brackets after each line and keep it to a numbered list.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "say it in ten words",
+     "do": "Paste that list back: \"Turn each line into something a driver can read from four metres away. Ten words or fewer, no jargon, no exclamation marks.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "put it on the board",
+     "do": "Write the numbered list into a note and put it on the desk screen or the whiteboard, with one blank line at the bottom for whatever changes during the shift.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "walk the dock first",
+     "do": "Stand at the doors for five minutes and check what is physically there against the list. Anything you cannot find moves to the bottom, no matter how urgent the sheet says it is.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "cycle-count-variances-into-three-patterns",
+   "title": "Forty cycle-count variances into the three worth digging",
+   "job": "The count never matches the system and nobody knows why",
+   "who": "inventory clerks and store leads writing off the same numbers weekly",
+   "field": "warehousing",
+   "fieldLabel": "Warehousing",
+   "accent": "#38bdf8",
+   "situation": "The count sheet comes back with forty differences and you are told to clear them. Most are two units in a bin nobody touches. Three of them are the same aisle, the same shift and the same size class — and that is the actual problem, buried under the noise.",
+   "outcome": "The patterns behind the variances, the bins you recount today, and one paragraph for the weekly meeting that explains the number instead of apologising for it.",
+   "minutes": 14,
+   "cost": "signup",
+   "costLabel": "Free account",
+   "payers": [],
+   "guard": "Do not let a model adjust, write off or explain a quantity. Every variance you act on gets recounted on the floor first, and if your inventory file is confidential, strip supplier and customer names before pasting.",
+   "tools": [
+    "Excel",
+    "ChatGPT",
+    "Google Sheets",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Excel → ChatGPT → Google Sheets → Claude → You",
+   "prompt": "Group these variances and tell me the three patterns that explain the most units lost. Do not suggest fixes. Say what I would need to check to be sure of each one.",
+   "steps": [
+    {
+     "tool": "Excel",
+     "chip": "keep five columns",
+     "do": "Open the count export and keep only location, item, system quantity, counted quantity, shift. Delete everything else so the paste stays small.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "find the shape of it",
+     "do": "Paste the rows and type: \"Group these variances and tell me the three patterns that explain the most units lost. Do not suggest fixes. Say what I would need to check to be sure of each one.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "check with a filter",
+     "do": "Back in the sheet, filter by aisle and by shift and count the variances yourself. If a pattern the model named does not survive that filter, drop it and stop mentioning it.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "the meeting paragraph",
+     "do": "Paste the two patterns you confirmed: \"Write one paragraph for my weekly meeting. Give the number, the likely reason, what I am doing this week, and what I am not claiming yet.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "recount two bins",
+     "do": "Go and recount two bins from each pattern before you send a word of it. Two honest recounts tell you more than any analysis on a screen.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "thirty-stops-into-a-run-order",
+   "title": "A thirty-stop manifest into a morning run you can actually drive",
+   "job": "Sequencing the vans by hand every single morning",
+   "who": "dispatchers and drivers building the daily run list",
+   "field": "logistics",
+   "fieldLabel": "Logistics & delivery",
+   "accent": "#818cf8",
+   "situation": "The stops arrive in the order the orders came in. You spend twenty minutes shuffling them on a printout, and half the day is still backtracking because a delivery window was hiding in a notes column nobody reads.",
+   "outcome": "A numbered stop list grouped by area with the timed ones pinned to the front, the two or three you are rescheduling to tomorrow, and the whole thing already in the driver’s phone.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "The model does not know about the low bridge, the one-way, the market day or the gate that closes at eleven. Cut addresses down to area or postcode before pasting if the customer data is not yours to upload, then drive the order yourself.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Gemini",
+    "WhatsApp",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Google Sheets → Gemini → WhatsApp → You",
+   "prompt": "Group these into runs that stay inside one area, order them with the timed windows first, and list any stop that looks like it belongs in a different group.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "area window and load",
+     "do": "Copy the manifest into three columns only: area or postcode, required window, and what is on the stop. Take the street names and customer names out.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "group by area",
+     "do": "Paste the rows and type: \"Group these into runs that stay inside one area, order them with the timed windows first, and list any stop that looks like it belongs in a different group.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "move what you know",
+     "do": "Reorder the list yourself where it is wrong about your patch. Write the reason next to anything you moved, so you can explain it at four o’clock.",
+     "type": "do"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "write the driver line",
+     "do": "Paste the finished order: \"Turn this into one short line per stop for a driver: stop number, area, time window, what to watch for. No explanations.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "WhatsApp",
+     "chip": "send it to the van",
+     "do": "Send the list into the driver group as text, not a screenshot, so it is still searchable three stops down the road.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check the last window",
+     "do": "Count the stops and read the last time window against the clock before anybody leaves the yard.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "delayed-shipments-into-one-message-each",
+   "title": "This morning’s delay list into an honest message per customer",
+   "job": "Twelve shipments late and twelve people who have not been told",
+   "who": "dispatchers and the customer-facing half of a delivery team",
+   "field": "logistics",
+   "fieldLabel": "Logistics & delivery",
+   "accent": "#818cf8",
+   "situation": "The carrier sends one line about disruption on three lanes at 06:50. You know which of your customers are on those lanes and none of them know yet. Writing twelve careful messages takes an hour you do not have, so you do three and hope for the best.",
+   "outcome": "A short, honest message per affected shipment in your drafts, each with the real reference and the next update time, plus a reminder set for when you promised to come back.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Use the dates the carrier gave you, never one the model thinks is nicer, and promise no compensation, no replacement and no guaranteed delivery time. Strip customer names before pasting if their account is confidential, then put them back by hand.",
+   "tools": [
+    "Google Sheets",
+    "Claude",
+    "Gmail",
+    "ChatGPT",
+    "Google Calendar",
+    "You"
+   ],
+   "arrow": "Google Sheets → Claude → Gmail → ChatGPT → Google Calendar → You",
+   "prompt": "Write one message per shipment. Say what happened, the date I have from the carrier, and when I will next update. No apology paragraphs and no promises I did not give you.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "who is affected",
+     "do": "List the late shipments with the lane, the reference number and a first name only. Nothing else about the account leaves your machine.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "draft the twelve",
+     "do": "Paste them and type: \"Write one message per shipment. Say what happened, the date I have from the carrier, and when I will next update. No apology paragraphs and no promises I did not give you.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "one draft each",
+     "do": "Put each message into its own draft with the reference in the subject line, then paste the real tracking number and full name back in from the system.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "the repeat offenders",
+     "do": "For the accounts already late twice: \"Rewrite this one so it owns the problem, gives a firm next update time, and does not blame the carrier in front of my customer.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Calendar",
+     "chip": "set the update slot",
+     "do": "Put a fifteen-minute reminder in for tomorrow at the update time you just promised, so the second message is not another surprise.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check every reference",
+     "do": "Read each draft against the tracking screen before you press send. A wrong reference number is a second angry call you did not need.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "line-stop-to-a-maintenance-log-line",
+   "title": "A line that stopped twice into a log entry that means something",
+   "job": "The maintenance log that is blank because nobody has time to write it",
+   "who": "operators, technicians and production leads with a paper log",
+   "field": "manufacturing",
+   "fieldLabel": "Manufacturing",
+   "accent": "#f59e0b",
+   "situation": "The press stopped for eleven minutes, then again after the break. The tech fixed it, the operator went back to running, and by the end of shift nobody can say what it actually was. Next month it happens again and three people start from nothing.",
+   "outcome": "Two log lines in the same wording every time — fault, duration, what was done, what to watch — plus the one question you are leaving for the next shift.",
+   "minutes": 8,
+   "cost": "signup",
+   "costLabel": "Free account",
+   "payers": [],
+   "guard": "Times, machine numbers and what was done come from you or the panel, never from the summary. Anything safety-related goes through your incident process, and that is a human call, not a tidy piece of writing.",
+   "tools": [
+    "Google Keep",
+    "Claude",
+    "ChatGPT",
+    "Excel",
+    "You"
+   ],
+   "arrow": "Google Keep → Claude → ChatGPT → Excel → You",
+   "prompt": "Turn this into four short fields: fault, duration, action taken, watch next shift. Fifteen words each and no detail I did not give you.",
+   "steps": [
+    {
+     "tool": "Google Keep",
+     "chip": "talk while it is fresh",
+     "do": "Press the mic the moment the machine is running again and say it out loud: what stopped, roughly how long, what you touched, what you are still not sure about. Messy is fine.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "make it a log line",
+     "do": "Paste or retype the note and ask: \"Turn this into four short fields: fault, duration, action taken, watch next shift. Fifteen words each and no detail I did not give you.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "same words next time",
+     "do": "Paste both events and type: \"Rewrite these so they follow exactly the same wording pattern, so a year of these logs can be read as one list.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Excel",
+     "chip": "one row per stop",
+     "do": "Add the rows to your downtime sheet with the real machine number, the real start time and the real duration off the clock or the panel.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "sign what you saw",
+     "do": "Read the entry back against what you actually did and put anything the summary smoothed over. A log is evidence, not prose.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "the-question-asked-four-times-a-shift",
+   "title": "The question you answer four times a shift into one posted card",
+   "job": "Tribal knowledge that lives in one person’s head",
+   "who": "production leads whose team keeps walking over to ask the same thing",
+   "field": "manufacturing",
+   "fieldLabel": "Manufacturing",
+   "accent": "#f59e0b",
+   "situation": "Every shift someone asks how that tool is set up, or who to call when the label printer jams. You answer it perfectly from memory, and it takes four minutes each time. Tomorrow someone asks again, and you are on leave.",
+   "outcome": "A one-page card taped at the machine: the three most-asked questions, the answer in six short steps, and who to get when the card is wrong.",
+   "minutes": 20,
+   "cost": "free-tier",
+   "costLabel": "Free tier",
+   "payers": [
+    "Canva"
+   ],
+   "guard": "Write the machine settings yourself, off the actual machine and the spec sheet. A model will happily invent a plausible temperature or torque. Numbers get checked before anything is printed and posted.",
+   "tools": [
+    "Phone notes",
+    "Google Sheets",
+    "Claude",
+    "Canva",
+    "You"
+   ],
+   "arrow": "Phone notes → Google Sheets → Claude → Canva → You",
+   "prompt": "Turn this into six numbered steps a person could follow with gloves on. Short sentences. Flag every step where a number depends on the machine.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "catch it two shifts",
+     "do": "For two shifts, write down every question that walks to your desk, one line each, in the exact words the person used.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "three questions only",
+     "do": "Sort the list and keep the three that came up most often. The other fifteen are not the problem, and nobody reads a page with eighteen answers on it.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "six steps plain words",
+     "do": "Paste one question with your own rough answer: \"Turn this into six numbered steps a person could follow with gloves on. Short sentences. Flag every step where a number depends on the machine.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Canva",
+     "chip": "make it one page",
+     "do": "Drop the three answers into a plain A4 template — big type, one question per block, and a blank line at the bottom that says ask if this is not what you see. Free templates are enough.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "test on new hands",
+     "do": "Hand it to someone who has never done that job and stand back while they read it. Fix the line they stall on, then print it and put it on the machine.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "forty-lines-into-the-transfers-to-write",
+   "title": "A forty-line availability report into the transfers worth writing",
+   "job": "Dead stock in one store, a waiting list in another",
+   "who": "shop managers, territory reps and franchise owners moving stock between sites",
+   "field": "retail",
+   "fieldLabel": "Retail & field sales",
+   "accent": "#fb7185",
+   "situation": "The weekly report says thirty-eight lines are out of stock somewhere. Half need a head office order; half are sitting eleven miles away in another store’s back room where nobody will look. The report is built to be printed, so you cannot see the pairings.",
+   "outcome": "A transfer list of eight to ten lines with from, to and quantity, and one short message to each store saying what is leaving and what is arriving.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Move only quantities the system actually shows on hand, and check both sides before the paperwork goes out. Store numbers beat store names in the paste — cut anything confidential about owners or customers.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Claude",
+    "WhatsApp",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Claude → WhatsApp → You",
+   "prompt": "Find the lines where one site has too much and another has none. Give me the transfer, the quantity, and say plainly where you cannot tell because a number is missing.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "zero and overstock",
+     "do": "Copy two lists out of the report for every site: lines showing zero on hand, and lines showing more than three weeks of cover. Keep the store number, drop the name.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "match the gaps",
+     "do": "Paste both lists and type: \"Find the lines where one site has too much and another has none. Give me the transfer, the quantity, and say plainly where you cannot tell because a number is missing.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "rank by the counter",
+     "do": "Paste the matches back: \"Rank these by what a customer asks for at the counter this week, not by value. Ten lines maximum and one reason each.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "WhatsApp",
+     "chip": "tell both stores",
+     "do": "Send each site a short message: what is leaving, what is arriving, when. Text, not a screenshot, so it is still findable on Sunday.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check the on-hand",
+     "do": "Open the stock screen for every line you are about to move and confirm the quantity on hand. A transfer written against yesterday’s number becomes a second stock-out.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "next-week-roster-into-a-coverage-check",
+   "title": "Next week’s roster into the four hours you have not covered",
+   "job": "Six staff, eleven constraints, and a shop open seven days",
+   "who": "shop managers and franchise owners building the weekly rota",
+   "field": "retail",
+   "fieldLabel": "Retail & field sales",
+   "accent": "#fb7185",
+   "situation": "You build the rota in your head, post it, and by Tuesday it collapses because someone is on a course and two people only do afternoons. The holes are always in the corner you stopped looking at after the second pass.",
+   "outcome": "A rota draft with every uncovered hour listed on its own line, two swap requests you can actually send, and a clean version you can post on Thursday.",
+   "minutes": 20,
+   "cost": "signup",
+   "costLabel": "Free account",
+   "payers": [],
+   "guard": "A model does not know your rest-break rules, young-worker limits or anything your own policy requires — check the finished rota against that policy yourself before it goes on the board. First names and availability only in the paste.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Copilot",
+    "Excel",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Copilot → Excel → You",
+   "prompt": "Fill the coverage minimums first. Then list every hour still uncovered, by day, and do not invent shifts to make the list look tidy.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "hours needed per day",
+     "do": "Write your trading hours per day and the minimum people you need at open, at peak and at close. Do this before you look at who is free.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "show the gaps",
+     "do": "Paste the hours you need and everyone’s availability and type: \"Fill the coverage minimums first. Then list every hour still uncovered, by day, and do not invent shifts to make the list look tidy.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Copilot",
+     "chip": "the two hard swaps",
+     "do": "Paste the uncovered hours and the three people who are nearly free: \"Give me the two swaps that cover the most hours with the least disruption, and a polite two-line message to ask for each.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Excel",
+     "chip": "put it in your grid",
+     "do": "Type the pattern back into your own rota sheet, your formatting and your names. Keep the model’s text out of the document that goes on the wall.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "read your own rules",
+     "do": "Check rest days, shift maxima and anything your policy requires with your eyes. This rota is your call, and the draft is only a draft.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "two-star-reviews-into-one-listing-change",
+   "title": "A two-star review streak into the one listing change worth making",
+   "job": "Thirty reviews that all say something and none say what",
+   "who": "marketplace sellers and storefront operators watching a rating slide",
+   "field": "ecommerce",
+   "fieldLabel": "E-commerce",
+   "accent": "#f472b6",
+   "situation": "The score dropped from four and a half to under four in six weeks and there are twenty-two new reviews. You read four, they each say something different, so you change nothing. Somewhere in that pile is one sentence a buyer needed to read before ordering.",
+   "outcome": "The two complaints that genuinely repeat, the exact line to add to your listing, and one honest question for your supplier about the rest.",
+   "minutes": 14,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Paste review text with buyer names, order numbers and dates stripped out. Change no size, material or claim the product does not actually meet, and never send a review reply you have not read yourself.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Claude",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Claude → Google Docs → You",
+   "prompt": "Group these complaints by what a buyer could have avoided by reading the listing. Count each group. Ignore anything that is just someone being rude.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "one review per row",
+     "do": "Copy the last thirty reviews into a sheet: the text, the star count, and which variation they bought. Delete names, order numbers and dates before you go further.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "what repeats",
+     "do": "Paste them and type: \"Group these complaints by what a buyer could have avoided by reading the listing. Count each group. Ignore anything that is just someone being rude.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "fix the listing line",
+     "do": "Paste the biggest group and your current bullet points: \"Write the one sentence that belongs on the listing so this surprises nobody. Plain, honest, no marketing words, and nothing I did not give you.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "the supplier question",
+     "do": "Under it, write the question for your maker or supplier about the second group: what fails, how often, what you want changed. Five lines, no drama.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "hold the real product",
+     "do": "Read the new line while holding the actual item. If you cannot point at it on the product, delete it. Then make the change.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "sku-dump-into-titles-people-search-for",
+   "title": "A bare SKU dump into titles a search can actually find",
+   "job": "Two hundred listings named by code and nothing else",
+   "who": "catalogue operators and marketplace sellers with a spreadsheet of parts",
+   "field": "ecommerce",
+   "fieldLabel": "E-commerce",
+   "accent": "#f472b6",
+   "situation": "Your catalogue is a wall of codes. The customer searches for the plain words for the thing and you simply do not exist. Every attribute you would need is already in the sheet — it has just never been turned into the words a person types.",
+   "outcome": "Ten rewritten titles and bullets built only from your own attributes, plus the one-page rule your colleague copies for the other hundred and ninety.",
+   "minutes": 18,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Use only the specs in your own sheet. No size, material, standard or approval the model adds, and no claims about fitness for anything. Search words come from real customer messages and the platform’s own search bar.",
+   "tools": [
+    "Google Sheets",
+    "Perplexity",
+    "ChatGPT",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Google Sheets → Perplexity → ChatGPT → Google Docs → You",
+   "prompt": "What words do buyers actually search for this? List the common phrasings, the synonyms and the usual mistakes, with sources I can click.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "attributes in columns",
+     "do": "Split the code into columns: item type, material, size, finish, pack quantity. If a column is empty for most rows, delete it rather than guessing at it.",
+     "type": "do"
+    },
+    {
+     "tool": "Perplexity",
+     "chip": "how buyers say it",
+     "do": "Describe the item plainly and ask: \"What words do buyers actually search for this? List the common phrasings, the synonyms and the usual mistakes, with sources I can click.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "ten titles from rows",
+     "do": "Paste ten cleaned rows and type: \"Write one title and three bullets per row using only the attributes I gave you. Put the searched word near the front. Add no spec that is not in the row.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write the rule",
+     "do": "Paste the best two and the weakest one into a doc with one sentence each saying why. That page is what the next hundred and ninety get copied from.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "read every number",
+     "do": "Line each title up against the row it came from: size, thread, material, pack count. Change five in the real catalogue and look at them live before you touch the rest.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "payslip-question-to-a-calm-reply",
+   "title": "A worried payslip question answered the same hour",
+   "job": "An employee is sure the payroll is wrong",
+   "who": "HR generalists and office managers who answer payroll questions they did not calculate",
+   "field": "hr",
+   "fieldLabel": "People & hiring",
+   "accent": "#a78bfa",
+   "situation": "A message lands at 4:40pm: \"my pay is wrong again, can someone check\". They have a mortgage and a bad month behind them, and you have the payslip, the contract and no idea yet whether they are right. Leaving it until tomorrow makes it a worse conversation.",
+   "outcome": "A reply that names the exact lines you checked, says which one you are still confirming and gives a real date — plus the short note that goes to payroll.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Strip the payslip to hours, rate, deduction names and amounts before it goes anywhere — no tax ID, no bank account, no date of birth, no employee name in the chat box. And do not let a model tell someone they are wrong: until payroll confirms it, this is a query, not an error.",
+   "tools": [
+    "Phone notes",
+    "Claude",
+    "ChatGPT",
+    "Gmail",
+    "Google Calendar",
+    "You"
+   ],
+   "arrow": "Phone notes → Claude → ChatGPT → Gmail → Google Calendar → You",
+   "prompt": "List every way these numbers could disagree. Say which line I must confirm with payroll and which one I can answer from this.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "write what they fear",
+     "do": "Type the two lines as the employee put them, then the three payslip lines involved — hours, rate, deduction name and amount. No name, no ID.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "find the mismatch",
+     "do": "Paste those lines and ask: \"List every way these numbers could disagree. Say which line I must confirm with payroll and which one I can answer from this.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "two replies to choose",
+     "do": "Give it the mismatch list and type: \"Write two replies to someone who thinks they are underpaid: one under 60 words, one that shows the arithmetic. Plain words, no apology theatre, and do not admit or deny an error.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "send and copy payroll",
+     "do": "Send the shorter one, copy payroll so the confirmation is not only your promise, and paste the amount you checked into the thread so nobody re-derives it.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Calendar",
+     "chip": "book the follow-up",
+     "do": "Put the follow-up you committed to in as a morning event, before you close the laptop. An unpromised date is the thing they remember.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "read it as them",
+     "do": "Read the reply as the person who typed at 4:40pm. Does it say who is doing what, by when, and what happens if they are right? If not, add one line.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "four-interviews-one-scorecard",
+   "title": "Four interviews for one role, scored the same way",
+   "job": "A panel where everyone asks their own questions",
+   "who": "hiring managers running three interviewers and no shared bar",
+   "field": "hr",
+   "fieldLabel": "People & hiring",
+   "accent": "#a78bfa",
+   "situation": "Four candidates this week, three interviewers, and each one has their own favourite list of questions and their own private idea of what good sounds like. By Friday the decision will come down to who talked most enthusiastically in the corridor, and you will not be able to explain it to the two you reject.",
+   "outcome": "One page: four month-one tasks, the question for each, what a strong answer contains, and a 1-4 grid every interviewer fills in before they speak to each other.",
+   "minutes": 20,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "The model does not know your team, so it will hand you generic questions unless you give it the actual tasks. Keep the notes factual rather than adjectival — they can be read back later — and treat the scorecard as discipline, not as a defence.",
+   "tools": [
+    "Google Docs",
+    "ChatGPT",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Google Docs → ChatGPT → Claude → Google Docs → You",
+   "prompt": "For each task, one interview question that would show whether they have done it, what a strong answer contains, and what a weak one sounds like.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "four month-one tasks",
+     "do": "Type four things this person has to be able to do in their first month, as tasks: \"rebuild the returns sheet without asking\", not \"detail-oriented\".",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "one question each",
+     "do": "Paste the four tasks and type: \"For each task, one interview question that would show whether they have done it, what a strong answer contains, and what a weak one sounds like.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "a scale they all share",
+     "do": "Paste the questions back and type: \"Give each question a 1-4 scale with one plain sentence for what each level means, so three people cannot score the same answer differently.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "lay out one page",
+     "do": "One row per question: the question, what strong looks like, the 1-4 boxes, a column per interviewer and one line at the end for the evidence they saw.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "answer it yourself",
+     "do": "Read each question aloud and answer it from your own memory of the job. If you cannot tell a 2 from a 3, the question is too vague — replace it now, not on Wednesday.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "six-exit-notes-one-honest-list",
+   "title": "Six exit interviews into the four things to fix",
+   "job": "Keeping the reasons people actually leave",
+   "who": "HR and team leads losing the same kind of person on repeat",
+   "field": "hr",
+   "fieldLabel": "People & hiring",
+   "accent": "#a78bfa",
+   "situation": "Four people left in one quarter. You have a document per exit — half of it is your own shorthand, two are the manager’s version of the same conversation, and one is a polite paragraph from someone who did not want trouble. None of it is connected to the two who stayed and are quietly looking.",
+   "outcome": "One page with the four repeated causes, the exact quote sitting under each, and two changes you can name at the next all-hands — kept beside the raw notes so nobody calls it editorial.",
+   "minutes": 18,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "In a team of nine, \"the shift lead\" is a name — so strip every person, department and identifying detail before pasting, and keep the quotes verbatim rather than let a model rewrite them. It will flatten real nuance into tidy corporate clichés, and a tidy cliché is useless in a meeting.",
+   "tools": [
+    "Google Docs",
+    "Claude",
+    "ChatGPT",
+    "You"
+   ],
+   "arrow": "Google Docs → Claude → ChatGPT → You → Google Docs",
+   "prompt": "Group these into causes, most repeated first. Under each, quote the exact words that belong there and say how many people said something close.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "six notes in one doc",
+     "do": "Paste all the exit notes one after another, labelled A to F, and delete any line that names a person, a manager or a team small enough to identify.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "the causes repeated",
+     "do": "Paste the whole doc and type: \"Group these into causes, most repeated first. Under each, quote the exact words that belong there and say how many people said something close.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "is it the job or them",
+     "do": "Paste the same notes into a second model and ask: \"What in here is about one manager rather than about the job? Say which cause collapses if you remove that one person.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "find the quotes",
+     "do": "For the top two causes, open your own notes and find the quoted line. One quote means a feeling, not a pattern — and where the two models disagree is the paragraph you have to read again yourself.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "two changes to say",
+     "do": "Under the list, write the two changes you can actually make, who you will say them to, and the sentence you will use. Save it beside the raw notes.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "month-end-jump-explained-once",
+   "title": "The month-end number that jumped, explained in one line",
+   "job": "Someone asks why this month costs four thousand more",
+   "who": "bookkeepers, controllers and owners who are also the finance department",
+   "field": "finance",
+   "fieldLabel": "Finance & accounts",
+   "accent": "#34d399",
+   "situation": "The month closed and one line is way off — above last month, above the plan, and you have forty minutes before the call where somebody asks. Two of the movers are genuine, one looks like a duplicate charge, and one is a subscription nobody remembers approving.",
+   "outcome": "A short table: each suspicious line, the amount, the two boring explanations, and the one question to ask a supplier or a colleague before you write anything off.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Redact account numbers, supplier bank details and anything identifying a customer before you paste — date, counterparty, category and amount are enough. A model is excellent at inventing a plausible reason, so every reason it offers is a question to ask, not an answer to record. Do not post a journal on its guess.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Google Sheets → Claude → You",
+   "prompt": "Here are two months. List the lines that moved most, biggest first, and for each give the two boring explanations and the one thing I should check.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "line the months up",
+     "do": "Put the two months side by side, then delete every column a stranger should not see. Keep date, counterparty, category and amount.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "rank what moved",
+     "do": "Copy the rows in and type: \"Here are two months. List the lines that moved most, biggest first, and for each give the two boring explanations and the one thing I should check.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "mark what is checked",
+     "do": "Add a column called checked and mark the lines only you can see — approvals, who ordered it, whether the period is right. That column is the real work.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "the two-line answer",
+     "do": "Paste your table and ask: \"Write the two-line answer I give the owner: the number that moved most, what is already explained, and what I am confirming by Friday.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "match the real ledger",
+     "do": "Open the two biggest movers in the actual ledger and compare the figures. If they are not there, your paste was wrong and every reason above them is fiction.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "overdue-invoices-chased-in-order",
+   "title": "An unpaid list turned into a chase that actually gets paid",
+   "job": "Chasing twelve customers without sounding rude or desperate",
+   "who": "freelancers, bookkeepers and small-business owners sending the same awkward email twelve times",
+   "field": "finance",
+   "fieldLabel": "Finance & accounts",
+   "accent": "#34d399",
+   "situation": "The ageing list is twelve names and thirty-days-past is the fat one. You have chased three of them verbally and nothing moved. You need to write to all of them today, except each is a person you see again, and the tone you used last time plainly did not work.",
+   "outcome": "Three short emails — a nudge, a firm one with a due date, and a last one before work pauses — plus every invoice filed under which one it gets and on what day.",
+   "minutes": 14,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never let a model invent an invoice number, an amount or a date: those come from your sheet, and one wrong figure turns a reminder into a dispute. Leave out interest, late fees and legal language unless your terms already say it and your accountant agrees — a threatened penalty that is not in the contract costs you the customer and the argument.",
+   "tools": [
+    "Google Sheets",
+    "ChatGPT",
+    "Google Docs",
+    "Claude",
+    "Gmail",
+    "You"
+   ],
+   "arrow": "Google Sheets → ChatGPT → Google Docs → Claude → Gmail → You",
+   "prompt": "Sort these into three groups by days late and size: gentle nudge, firm with a date, and last one before we pause work. Say which invoices land where and why.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "paste the aged list",
+     "do": "Bring the overdue list into a sheet with invoice number, issue date, days late and amount. Delete your internal notes and staff names.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "three chase groups",
+     "do": "Paste the rows and type: \"Sort these into three groups by days late and size: gentle nudge, firm with a date, and last one before we pause work. Say which invoices land where and why.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write the three once",
+     "do": "Draft the three emails once each, leaving the invoice number, the amount and the due date as obvious gaps you will fill from the sheet.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "less sorry, not colder",
+     "do": "Paste the three drafts: \"Make these less apologetic without making them colder. Keep each under 90 words and never use the phrase ‘valued customer’ or ‘following up on my previous email’.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "send group one",
+     "do": "Send the first group now, pasting the numbers from the sheet rather than retyping them, and schedule the second group for the same weekday next week.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check each number",
+     "do": "Read the invoice number and the amount in every email against your own sheet before they leave. That single mistake is the one that makes you look wrong instead of early.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "invoice-versus-quote-differences",
+   "title": "The invoice that does not match the order, in five differences",
+   "job": "Approving a supplier bill against the quote you signed",
+   "who": "AP clerks, ops managers and anyone whose job is to say yes or no to a bill",
+   "field": "finance",
+   "fieldLabel": "Finance & accounts",
+   "accent": "#34d399",
+   "situation": "An invoice lands as a PDF, the total is higher than the signed quote, and the person who ordered it is on site with no signal. The four of you have minutes before the payment run closes, so somebody is going to guess — and guessing here means a supplier chasing you next month.",
+   "outcome": "A difference list between the two documents — line, quantity, unit price, dates, reference — each marked same, different, or it could not be read, ready to paste into the mail to the supplier.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Both documents go in as text with bank details and registration numbers stripped. A model reads a 1 as a 7 off a scan and will happily report a difference that is not there, so every mismatch is checked against the PDF before you hold a payment — and nothing here decides the tax treatment, which is your accountant’s call.",
+   "tools": [
+    "Google Lens",
+    "Google Docs",
+    "Claude",
+    "You",
+    "Gmail"
+   ],
+   "arrow": "Google Lens → Google Docs → Claude → You → Gmail",
+   "prompt": "Compare these two documents line by line. Give me a table: item, in the quote, on the invoice, same or different, and anything you could not read clearly.",
+   "steps": [
+    {
+     "tool": "Google Lens",
+     "chip": "photo to text",
+     "do": "If it came on paper, point the camera app at each page and copy the text it lifts out. For a PDF, open it in Chrome and copy the visible text instead.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "paste both, strip ids",
+     "do": "Put the quote and the invoice into one document under two headings, then delete the bank lines, account numbers and any sort code before you ask anything.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "compare line by line",
+     "do": "Type: \"Compare these two documents line by line. Give me a table: item, in the quote, on the invoice, same or different, and anything you could not read clearly.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "read the three biggest",
+     "do": "Open the invoice itself and read the three largest differences with your own eyes. Keep only the ones that are real and note which document you believe.",
+     "type": "check"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "mail the supplier",
+     "do": "Send the difference table to the supplier, one line per mismatch, ask which document is correct, and copy the person who placed the order.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "customer-words-into-twelve-angles",
+   "title": "Fifty reviews turned into twelve angles you have not used",
+   "job": "Writing copy when everything sounds like everything else",
+   "who": "marketing owners with a pile of reviews and a brief that says make it pop",
+   "field": "marketing",
+   "fieldLabel": "Marketing",
+   "accent": "#fbbf24",
+   "situation": "You have written the same three claims for months — fast, friendly, good value — and the click rate keeps sliding down. Meanwhile your customers have been telling you exactly why they bought, in their own words, in reviews you have never read past the five-star ones.",
+   "outcome": "Twelve hooks, each one carrying the quote that inspired it and where to use it, so you can prove the claim before you spend anything testing it.",
+   "minutes": 20,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Public reviews only, with names, photos and anything identifying a reviewer removed before pasting, and never turn a customer’s experience into a claim about what your product does. A model will overstate what someone said, so every hook needs its quote sitting beside it: no quote, no hook.",
+   "tools": [
+    "Google Docs",
+    "ChatGPT",
+    "Claude",
+    "Google Sheets",
+    "You"
+   ],
+   "arrow": "Google Docs → ChatGPT → Claude → Google Sheets → You",
+   "prompt": "Group these by the reason someone bought and the thing that nearly stopped them. Two short quotes under each group, nothing else.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "reviews in, names out",
+     "do": "Paste thirty to fifty recent reviews as plain text, one per line, names gone. Keep the bad ones — that is where the objections live.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "why they bought",
+     "do": "Type: \"Group these by the reason someone bought and the thing that nearly stopped them. Two short quotes under each group, nothing else.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "three hooks per group",
+     "do": "Paste the groups back and ask: \"For each group, three hooks under 12 words that start from that customer’s own words. No exclamation marks and no invented facts.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "one row per hook",
+     "do": "One row per hook: the hook, the quote it came from, and where it goes — subject line, first three seconds of a clip, ad headline.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "delete the unquotable",
+     "do": "Cross out every hook you cannot tie back to a quote on its row. That is usually a third of them, and the rest are worth paying for.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "one-call-into-five-posts",
+   "title": "Twenty minutes of a real conversation into a week of posts",
+   "job": "Nothing left to say about your own product",
+   "who": "founders and solo marketers who only ever talk to themselves online",
+   "field": "marketing",
+   "fieldLabel": "Marketing",
+   "accent": "#fbbf24",
+   "situation": "The calendar is empty again, because everything you can say about your own product you have already said. But yesterday you spent twenty minutes with a customer and you remember three things they said that surprised you — except you did not write any of them down, and by Friday you will only remember the feeling.",
+   "outcome": "Five posts in your own voice, each built on one thing a real person said, plus the question you still need answered so the next call fixes it.",
+   "minutes": 20,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Ask before you reuse anything from a customer call, then strip the company name, the numbers and the person — and do not upload a recording to a random site to get a transcript when your own phone notes will do. Keep the fumbles in: that is usually where the useful sentence is.",
+   "tools": [
+    "Phone notes",
+    "Google Keep",
+    "Claude",
+    "ChatGPT",
+    "LinkedIn",
+    "You"
+   ],
+   "arrow": "Phone notes → Google Keep → Claude → ChatGPT → LinkedIn → You",
+   "prompt": "Pick the five things here only someone who has done this job would say. Under each, one short post in plain English and one question to ask next time.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "type it on the walk",
+     "do": "Before you forget, write what you remember in their words: the question that stopped them, the thing they complained about, the two bits you missed.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "say it into the phone",
+     "do": "Press the mic and talk through the same call for ninety seconds instead of typing it, then copy that transcript under your notes. Speech gets the phrases back.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "the five moments",
+     "do": "Paste notes and transcript and type: \"Pick the five things here only someone who has done this job would say. Under each, one short post in plain English and one question to ask next time.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "make it sound like me",
+     "do": "Paste one old post of yours plus the five drafts: \"Rewrite these in the style of my example — same sentence length, no marketing words, and do not add any fact I did not give you.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "LinkedIn",
+     "chip": "schedule the best two",
+     "do": "Post the two strongest this week and put the question from a third one in the first comment, where the people who care will find it.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "delete invented detail",
+     "do": "Read all five against your notes. Any figure, name or detail that is not in the notes came from the model — cut it or go and verify it before posting.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "newsletter-first-two-lines",
+   "title": "The email nobody opens past the first two lines",
+   "job": "Rewriting the top of an email that is losing readers",
+   "who": "newsletter owners and marketing leads watching an open rate slide for four sends",
+   "field": "marketing",
+   "fieldLabel": "Marketing",
+   "accent": "#fbbf24",
+   "situation": "You know the number that matters is clicks, and it has fallen four sends running. Your hunch is the opening has gone soft — a greeting, a hope-you-are-well, and the actual news down on line eight where nobody gets. You cannot see it any more, because you wrote it.",
+   "outcome": "Six ways to start, the one that is most like you, the paragraph from the middle that is now gone, and the email sent to yourself so you see it in a real inbox.",
+   "minutes": 16,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "A model will make your opening sound like every other marketing email unless you feed it your own old ones as the only style it may use. Do not let it add a statistic, a customer or a deadline you did not give it — an invented offer is the fastest way to lose a list.",
+   "tools": [
+    "Google Docs",
+    "ChatGPT",
+    "Claude",
+    "Gmail",
+    "You"
+   ],
+   "arrow": "Google Docs → ChatGPT → Claude → Gmail → You",
+   "prompt": "Using only my four old openings as the style, write six ways to start this email so the news is in the first line. No greeting, no question opener, 30 words each.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "draft plus four olds",
+     "do": "Paste this week’s draft, then under a heading the opening two lines from the four emails that performed best. Those four are the style sample.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "six openings, line one",
+     "do": "Type: \"Using only my four old openings as the style, write six ways to start this email so the news is in the first line. No greeting, no question opener, 30 words each.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "what can i cut",
+     "do": "Paste the draft and ask: \"Which sentences in the middle could be deleted without losing the point? List each one with the reason it is safe to cut.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "send to yourself",
+     "do": "Put your chosen opening in, keep one of its phrases and change one word to yours, then send it to yourself and look at it on your phone in a real inbox.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "read it on a phone",
+     "do": "With the preview pane closed, read the top two lines. If the news still is not there, the model did not help and the opening is yours to rewrite by hand.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "the-same-question-nine-times",
+   "title": "The question you answered nine times, written down once",
+   "job": "Turning a repeating request into a page customers can find",
+   "who": "support agents and owners whose knowledge base is one person’s memory",
+   "field": "support",
+   "fieldLabel": "Customer support",
+   "accent": "#4ade80",
+   "situation": "Nine people this fortnight asked some version of the same thing — the return window, why the app logs out, what comes in the box. You answered each one politely and wrote nothing down, so the tenth gets the same typing from you at 4pm on a Friday.",
+   "outcome": "One plain page: the question in the words customers actually use, the four-line answer, the two edge cases, and the reply you paste next time instead of composing.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Take the wording from real tickets with names, order numbers and emails removed. A model will make your policy sound tidy and certain even when it is neither, so anything about refunds, warranty or delivery timing goes back to what your terms actually say before it is published anywhere.",
+   "tools": [
+    "Gmail",
+    "Claude",
+    "ChatGPT",
+    "You",
+    "Google Docs"
+   ],
+   "arrow": "Gmail → Claude → ChatGPT → You → Google Docs",
+   "prompt": "Merge these into one page: the question in the words a customer would use, the answer in four lines, and every place my five answers disagree with each other.",
+   "steps": [
+    {
+     "tool": "Gmail",
+     "chip": "the five clearest",
+     "do": "Search the last two months for the phrase you keep typing, open the five answers you are happiest with and copy them into one doc, names and order numbers stripped out.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "merge into one page",
+     "do": "Paste the five and type: \"Merge these into one page: the question in the words a customer would use, the answer in four lines, and every place my five answers disagree with each other.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "the follow-ups",
+     "do": "Paste the merged page: \"Write the three questions a customer asks after reading this, and the two-sentence answer to each, using only what I gave you.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "check every number",
+     "do": "Open your terms and the product itself and confirm every day, cost and limit on the page. The disagreement between your own five replies is the real question — settle it before anyone else has to.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "save it searchable",
+     "do": "Save as one page with a title a customer would type, put the paste-able answer at the very top, and send the link to whoever owns the help centre.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "polite-no-on-a-refund",
+   "title": "Saying no to a refund without losing the customer",
+   "job": "A decent person asking for money your policy will not return",
+   "who": "support agents and owners who decide the awkward money cases themselves",
+   "field": "support",
+   "fieldLabel": "Customer support",
+   "accent": "#4ade80",
+   "situation": "They want their money back and they are being civil about it, which makes it harder. The item is past the window, their complaint about the product is genuinely correct, and the answer is no. You have typed and deleted four versions and you are dreading the reply.",
+   "outcome": "A reply that says no once and clearly, admits the part they are right about, offers the one thing you are allowed to do, and two lines ready for if they push back.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "You decide the outcome — a model is trained to please and will happily promise a refund, a credit or a replacement your terms do not allow. Keep personal details out of the chat box; the order facts and dates are enough. Anything involving a chargeback, a complaint body or a lawyer is yours to answer or escalate, never to automate.",
+   "tools": [
+    "Phone notes",
+    "ChatGPT",
+    "Claude",
+    "You",
+    "Gmail"
+   ],
+   "arrow": "Phone notes → ChatGPT → Claude → You → Gmail",
+   "prompt": "Draft a reply that says no to the refund once, plainly, then offers this instead. Admit the fault, do not over-apologise, five sentences maximum.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "write it raw",
+     "do": "Type the four facts with no name attached: what they bought, the order and return dates, what is actually wrong with the product, and the one thing you are allowed to offer.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "no once, then offer",
+     "do": "Paste the facts and type: \"Draft a reply that says no to the refund once, plainly, then offers this instead. Admit the fault, do not over-apologise, five sentences maximum.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "if they push back",
+     "do": "Paste the draft: \"Give me the two lines to use if they reply that they will dispute the charge, and one closing line that does not repeat the no.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "read it as them",
+     "do": "Check it against your actual terms and the dates on the order, then change the greeting and one sentence so it sounds like you. If it reads like a policy document, rewrite the middle.",
+     "type": "check"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "update the order note",
+     "do": "Send it and add a note to the order record: what you offered, what you declined and why, so the next person does not hand out the refund by accident.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "thirty-retro-notes-five-actions",
+   "title": "Thirty sticky notes into five things people will actually do",
+   "job": "A retro nobody wants because nothing ever changes",
+   "who": "scrum masters and team leads whose action list never survives one sprint",
+   "field": "project-mgmt",
+   "fieldLabel": "Projects & delivery",
+   "accent": "#7dd3fc",
+   "situation": "The board is full of notes, three of them are the same complaint in different colours, one is about the person who left, and the room has fifteen minutes left. Last sprint you wrote six actions and nobody has mentioned any of them since, which is why half of this board is sarcasm.",
+   "outcome": "Four causes named in the team’s own words, one action each with a person and a date beside it, and a block you can paste straight into the doc the next retro opens on.",
+   "minutes": 18,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Strip anything that names a colleague before pasting — you are not asking a model to rank your team. Its groupings are guesses, so hold them against the notes, and one action per cause with an owner and a date is the whole difference between a retro and a wall of wishes.",
+   "tools": [
+    "Google Docs",
+    "Claude",
+    "ChatGPT",
+    "You"
+   ],
+   "arrow": "Google Docs → Claude → ChatGPT → Google Docs → You",
+   "prompt": "Group these into causes, biggest first. Use the sharpest line in the group as its heading, and tell me which notes fit nowhere.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "every note one line",
+     "do": "Type every note as a single line with no names on it, plus the two things the room said out loud that nobody wrote down.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "causes, biggest first",
+     "do": "Paste the lines and type: \"Group these into causes, biggest first. Use the sharpest line in the group as its heading, and tell me which notes fit nowhere.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "one action per cause",
+     "do": "Paste the four causes: \"For each, one action we could finish inside one sprint, and the thing we will look at next retro to know whether it worked.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "the old list too",
+     "do": "Put the four under last sprint’s actions and mark each one done, still open, or dropped — with the reason. An action list that never gets closed out is why nobody believes the next one.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "name and a date",
+     "do": "Say each action aloud to the room and ask who owns it and by when. If nobody answers with a name and a date, delete it and stop pretending it is an action.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "a-delay-explained-with-three-dates",
+   "title": "A slipped date turned into a message a client can act on",
+   "job": "Telling someone important that the date has moved",
+   "who": "project managers and freelancers who owe a status mail they keep putting off",
+   "field": "project-mgmt",
+   "fieldLabel": "Projects & delivery",
+   "accent": "#7dd3fc",
+   "situation": "The build is two weeks late, three things caused it, and the client meeting is Thursday. You can see the whole mess in your head, but every version you start typing sounds either like an excuse or like a technical report — and the client has been telling their own board your old date for a month.",
+   "outcome": "A short mail with the new date first, two options with what each costs, one plain sentence on the cause — and three bullets in the same words for Thursday.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Do not let a model choose the date or the trade-off: it will agree to whatever sounds calm, including a delivery day you know is impossible. Give it only facts from your own plan, and name the cause plainly — a vague reason costs more trust than an ugly one.",
+   "tools": [
+    "Phone notes",
+    "ChatGPT",
+    "Claude",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Phone notes → ChatGPT → Claude → Google Docs → You",
+   "prompt": "Using only these, write a five-line update to a client: the new date first, one sentence on why, then two options with what each costs. No apology paragraph.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "the four true facts",
+     "do": "Write what moved, the old date and the new one, the two causes you can state without blaming a named person, and what you could cut to buy time back.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "five lines, no apology",
+     "do": "Paste the facts and type: \"Using only these, write a five-line update to a client: the new date first, one sentence on why, then two options with what each costs. No apology paragraph.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "three hard questions",
+     "do": "Paste the draft: \"What three questions will this cause, and what is the shortest honest answer to each? One of them will be about blame — answer that one carefully.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "one page for Thursday",
+     "do": "Put the mail and the three answers on one page, add the two dates you can genuinely commit to, and keep the page open during the meeting.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check every date",
+     "do": "Read every date against the plan and every name against who is still on the project. Then read it as the client, who has to forward it to someone above them.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "a-sop-nobody-opens",
+   "title": "A twelve-page procedure into the one page people actually follow",
+   "job": "The SOP that is correct but unread",
+   "who": "ops managers and team leads who keep re-explaining the same process",
+   "field": "operations",
+   "fieldLabel": "Operations & admin",
+   "accent": "#60a5fa",
+   "situation": "The procedure is current, approved, and eleven pages long. Every mistake the team makes sits in a paragraph on page nine. You have started answering it in person instead, which means the document is now decoration.",
+   "outcome": "One printed page: the five steps in order, the two places it usually goes wrong, and who to tell when it does.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "If the procedure is internal, do not paste company names, system names or staff details into a chat box — swap them for placeholders, or run the whole thing on Your own laptop. The short version must still match the original word for word on numbers, form names and thresholds; that check is yours, and a model will smooth a deadline into a suggestion.",
+   "tools": [
+    "Google Docs",
+    "Claude",
+    "Gemini",
+    "You"
+   ],
+   "arrow": "Google Docs → Claude → Google Docs → Gemini → You → You",
+   "prompt": "Turn this into one page: five numbered steps, each starting with a verb. Then list the two places a new person most often gets this wrong, and the one sentence for who to tell when it breaks. No headings I did not ask for.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "paste the eleven pages",
+     "do": "Copy the whole procedure into a blank doc and strip the styling so it is plain text you can paste anywhere.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "cut it to five steps",
+     "do": "Paste the text, then type: \"Turn this into one page: five numbered steps, each starting with a verb. Then list the two places a new person most often gets this wrong, and the one sentence for who to tell when it breaks. No headings I did not ask for.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "rebuild it clean",
+     "do": "Start a second blank doc, paste the one page in, set the font big enough to read at a laminator distance, and save it as a PDF.",
+     "type": "do"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "test it on a novice",
+     "do": "Open a fresh chat, paste only the one page, and ask: \"What are the first three things I do, and who signs step four?\" If it cannot answer, the page is too clever — cut it again.",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "diff every number",
+     "do": "Read the one page against the original line by line: each threshold, form name, deadline and sign-off. Fix what drifted before anything gets printed.",
+     "type": "check"
+    },
+    {
+     "tool": "You",
+     "chip": "wall test it",
+     "do": "Tape the printed page where the work happens and watch one person follow it without asking you anything. The step they still ask about is the step you got wrong.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "vendor-thread-one-decision",
+   "title": "Thirty emails and no decision into one page with a name on it",
+   "job": "The vendor thread four people will not close",
+   "who": "ops and procurement people chasing a yes or no that is six weeks late",
+   "field": "operations",
+   "fieldLabel": "Operations & admin",
+   "accent": "#60a5fa",
+   "situation": "Fourteen emails, two people on leave, one quote that changed twice. Everyone agrees the thread is a mess. Nobody is going to be the one who says what was actually decided.",
+   "outcome": "A four-line decision note sent to the same distribution: what we pick, what it costs, who actioned it, and the date it is closed.",
+   "minutes": 8,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Prices, contract values and supplier names are commercially sensitive — paste the thread to Your own laptop, or blank the amounts and names before you upload anywhere. Nothing here commits money: the decision stays yours, and a model will happily record an option someone rejected as though it were agreed.",
+   "tools": [
+    "Gmail",
+    "Google Docs",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Gmail → Google Docs → Claude → Google Docs → You → Gmail",
+   "prompt": "List every decision actually agreed, every option still open, and every promise made by a named person with the date it was made. Quote the line it came from. Do not summarise what is not in the text.",
+   "steps": [
+    {
+     "tool": "Gmail",
+     "chip": "copy the whole chain",
+     "do": "Open the thread, select all messages, and copy them into one plain-text block — sender, date and body, in order.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "blank the prices",
+     "do": "Search and replace the supplier names and any figure you would not want outside the company with placeholders you recognise, like vendor-A and price-A.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "find the open question",
+     "do": "Paste the redacted chain and type: \"List every decision actually agreed, every option still open, and every promise made by a named person with the date it was made. Quote the line it came from. Do not summarise what is not in the text.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write the four lines",
+     "do": "Write the decision note under three headings: Decision, Cost, Owner and Date. Anything the model could not quote gets left out.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check each claim",
+     "do": "Open the thread again and check every claim in your four lines against the message it supposedly came from. If you cannot find it, delete it.",
+     "type": "check"
+    },
+    {
+     "tool": "Gmail",
+     "chip": "send and close it",
+     "do": "Reply on the same thread, subject line \"DECISION — no further replies needed\", and put the one person still owed a task in the To line.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "handover-you-will-forget",
+   "title": "A handover you can still read at eight tomorrow morning",
+   "job": "Leaving a role, a shift or a project you ran alone",
+   "who": "the person leaving a job nobody documented while they held it",
+   "field": "operations",
+   "fieldLabel": "Operations & admin",
+   "accent": "#60a5fa",
+   "situation": "You are the only one who knows how the monthly report is built, which supplier always delivers late, and who to chase when the portal is down. You have two weeks, and you are not going to remember all of it on the last Friday.",
+   "outcome": "A handover doc with the recurring tasks, the systems and how to log in to each, the three things that always break, and where the files live.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never write a password, a token or a client list into it — a handover doc gets forwarded, and you will not know to whom. Where only you know something, run the dictation on Your own laptop so nothing leaves the machine. The last step is you deleting whatever was never yours to write down.",
+   "tools": [
+    "Google Calendar",
+    "Google Keep",
+    "ChatGPT",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Google Calendar → Google Keep → ChatGPT → Google Docs → You → You",
+   "prompt": "Rewrite these as a handover for someone who has never done this job: one section per task with the trigger, the steps, the system it lives in, and who to ask. Then list the questions a total stranger would still have.",
+   "steps": [
+    {
+     "tool": "Google Calendar",
+     "chip": "mine your own week",
+     "do": "Open the last month of your calendar and list every recurring meeting, deadline and report slot you actually have. That is the real job description.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Keep",
+     "chip": "speak it, do not type",
+     "do": "Press the mic for each task and talk it through out loud as if you were standing beside the person: what triggers it, what you open, what you send, and what you do when it fails.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "fill the gaps",
+     "do": "Paste the transcripts and type: \"Rewrite these as a handover for someone who has never done this job: one section per task with the trigger, the steps, the system it lives in, and who to ask. Then list the questions a total stranger would still have.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "answer the stranger",
+     "do": "Work through its list of missing questions and answer each one in plain sentences under the task it belongs to. This is the part only you can do.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "delete the secrets",
+     "do": "Search the doc for passwords, client names, salaries and anything privileged, and strike every hit. Then delete anything you wrote that was opinion about a person.",
+     "type": "check"
+    },
+    {
+     "tool": "You",
+     "chip": "dry run it cold",
+     "do": "Ask the person taking over to run one task with the doc while you stay silent. Every question they ask is a hole in the page, not in them.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "lesson-plan-by-nine",
+   "title": "Tomorrow’s lesson for the half of the class that is lost",
+   "job": "A plan due tonight for a class in three levels",
+   "who": "teachers and tutors writing tomorrow’s plan after school",
+   "field": "education",
+   "fieldLabel": "Teaching & training",
+   "accent": "#c084fc",
+   "situation": "The topic needs nine weeks of prior knowledge and the class has four. Twelve are with you, eight are already behind, and three finished the work in the first ten minutes. The plan is due at 9 a.m. and you are out of evening.",
+   "outcome": "One lesson sheet with the same task at three entry points, the three questions you will ask, and a five-minute starter that tells you who is lost before you teach anything.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "No pupil names, no SEN or IEP notes, no behaviour incidents and no class list in the chat box — describe groups by need only. What the model produces is a draft of your professional judgement, not a substitute for it: check it against your syllabus, your school’s safeguarding policy, and what you know these specific children cannot yet do.",
+   "tools": [
+    "Phone notes",
+    "Claude",
+    "ChatGPT",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Phone notes → Claude → ChatGPT → Google Docs → You → You",
+   "prompt": "Write the same task at three levels: one for a pupil missing the prior step, one for the standard task, one stretch version. Same outcome, different entry. Give each a sentence I can read aloud.",
+   "steps": [
+    {
+     "tool": "Phone notes",
+     "chip": "state the one thing",
+     "do": "Write the single thing they must be able to do by the end of the lesson, plus the two most common ways this class fails it. Keep it in your own words.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "three entry points",
+     "do": "Paste that plus the syllabus wording (no names) and type: \"Write the same task at three levels: one for a pupil missing the prior step, one for the standard task, one stretch version. Same outcome, different entry. Give each a sentence I can read aloud.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "five-minute starter",
+     "do": "Ask: \"Design a five-minute no-writing starter that shows me instantly who cannot do the prior step. Tell me exactly what to look for in their answers.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "build the sheet",
+     "do": "Paste the starter at the top, the three versions side by side under it, and the timing down the margin in minutes, not idealism.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "fit it to the hour",
+     "do": "Read it against the room you actually have. Cross out anything that needs kit you lack, and every example that names a pupil or a family.",
+     "type": "check"
+    },
+    {
+     "tool": "You",
+     "chip": "cold read it at seven",
+     "do": "The next morning, read the sheet once before they arrive and run the starter yourself against the clock. Cut whatever spills past the bell.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "same-mistake-forty-times",
+   "title": "Forty copies of the same mistake into one fix and four exercises",
+   "job": "Marking the identical misconception all the way down the pile",
+   "who": "teachers and markers facing a full set of scripts tonight",
+   "field": "education",
+   "fieldLabel": "Teaching & training",
+   "accent": "#c084fc",
+   "situation": "Every paper has the same error — a sign dropped, a date attributed to the wrong person, the middle step skipped. You have written the same comment forty times and there are still twenty scripts in the pile.",
+   "outcome": "One shared feedback sheet: the misconception named plainly, why it happens, one worked example, and four practice items with answers underneath.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never upload pupil work — a script has a name, a class and sometimes a diagnosis written on it. Type the misconception into the chat box, not the paper. The model cannot see the child: check that the examples use only notation you have actually taught, and that the practice answers are right yourself, because a model will build a wrong answer with total confidence.",
+   "tools": [
+    "You",
+    "Gemini",
+    "Claude",
+    "Google Docs"
+   ],
+   "arrow": "You → Gemini → Claude → Google Docs → You → Google Docs",
+   "prompt": "Explain this misconception to a pupil who made it honestly: two sentences on why it feels right, two on why it is wrong, then one worked example that starts from where they went wrong.",
+   "steps": [
+    {
+     "tool": "You",
+     "chip": "name the mistake",
+     "do": "Write the misconception in one plain sentence, the exact line where it appears, and one real example of it with the numbers replaced by your own.",
+     "type": "check"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "explain why it happens",
+     "do": "Type: \"Explain this misconception to a pupil who made it honestly: two sentences on why it feels right, two on why it is wrong, then one worked example that starts from where they went wrong.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Claude",
+     "chip": "four exercises",
+     "do": "Paste the sheet so far and ask: \"Write four practice items: the first a direct repeat, the second one small twist, the third a trap for this exact mistake, the fourth a transfer to a new context. Put the answers underneath, separated by a line.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "make the feedback page",
+     "do": "Paste the explanation and the four items into one page headed with the misconception, answers on a second page so you can hand out only the first.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "solve it yourself",
+     "do": "Work all four items closed-book and check the answers. Fix any that do not match, and delete any item needing a method you have not taught.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "one line per paper",
+     "do": "Write the single line that goes on every script pointing at the sheet, and add your own personal sentence for the handful whose error was a different one.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "notice-parents-actually-read",
+   "title": "A term notice into one page parents read on the bus",
+   "job": "The whole-term letter nobody opens",
+   "who": "teachers and year leads sending the same notices every half term",
+   "field": "education",
+   "fieldLabel": "Teaching & training",
+   "accent": "#c084fc",
+   "situation": "You sent a page of dates, kit, consent and policy. The reply is forty questions, nineteen of them answered in the first paragraph. Next term you get one screen, so it has to work on the first read.",
+   "outcome": "One page a parent understands in sixty seconds, plus the same content as a short plain message for whatever group channel the school already runs.",
+   "minutes": 8,
+   "cost": "free-tier",
+   "costLabel": "Free tier",
+   "payers": [
+    "Canva"
+   ],
+   "guard": "Never name a child, an incident, a family situation or a member of staff in a notice — and do not paste any pupil data into a chat box. A translated notice is still a legal and safeguarding document: your school’s policy owner or office manager signs it off before it leaves, and the dates get checked against the calendar, not the draft.",
+   "tools": [
+    "Google Docs",
+    "ChatGPT",
+    "Gemini",
+    "Canva",
+    "You",
+    "Phone notes"
+   ],
+   "arrow": "Google Docs → ChatGPT → Gemini → Canva → You → Phone notes",
+   "prompt": "Rewrite this as one page for a busy parent: the three dates with what to do by each, what to buy or bring, what I must sign, and one line on who to contact. Delete everything that is not action, and mark anything you dropped as LEFT OUT.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "paste last term’s page",
+     "do": "Open the notice you sent last term and copy it into a plain doc so the text can move cleanly.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "cut to what to do",
+     "do": "Paste it and type: \"Rewrite this as one page for a busy parent: the three dates with what to do by each, what to buy or bring, what I must sign, and one line on who to contact. Delete everything that is not action, and mark anything you dropped as LEFT OUT.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "one more language",
+     "do": "Paste the one page and ask: \"Translate this into simple, natural [the language] at reading level A2, keep every date and number exactly as it is, and list any word you had to guess at.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Canva",
+     "chip": "make it one screen",
+     "do": "Drop the text into a free one-page flyer template: dates first, one box per item, nothing smaller than 14 point, then export it as a PDF.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "check dates and sums",
+     "do": "Read every date, amount, uniform item and contact against your own calendar and school policy. Open the translation and verify the digits did not move.",
+     "type": "check"
+    },
+    {
+     "tool": "Phone notes",
+     "chip": "sixty-second read",
+     "do": "Hand it to one adult who has never read it and time them. Whatever they ask about is the line you still have to rewrite.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "waiting-list-triage-note",
+   "title": "A call log into the triage note a clinician can read in a minute",
+   "job": "A waiting list nobody can sort",
+   "who": "clinic admins, receptionists and care coordinators holding a queue",
+   "field": "healthcare",
+   "fieldLabel": "Clinic & care",
+   "accent": "#2dd4bf",
+   "situation": "Forty people are waiting. Your notes are a call log, a paper form and three messages on your own phone. The clinician asks who is worst and you cannot answer fast enough to be useful.",
+   "outcome": "One de-identified spreadsheet, one row per patient: symptoms in their words, how long, risk flags copied from your clinic form, and a suggested order for the clinician to overwrite.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "No name, no number, no address, no date of birth and no full record ever goes into a chat box — the model only ever sees the de-identified table, and anything too sensitive to leave the building gets done on Your own laptop. This does not triage anybody. It organises what a clinician triages: the ordering, the urgency and the referral decision stay with them, and a model must never be asked for a diagnosis.",
+   "tools": [
+    "Your own laptop",
+    "Phone notes",
+    "Google Sheets",
+    "Claude",
+    "You"
+   ],
+   "arrow": "Your own laptop → Phone notes → Google Sheets → Claude → You → You",
+   "prompt": "Group these by the urgency criteria in my last two columns. For each row give one reason, and list every row where the information is too thin to judge. Do not diagnose anything.",
+   "steps": [
+    {
+     "tool": "Your own laptop",
+     "chip": "build the blank table",
+     "do": "Open any spreadsheet on the machine and make one column per field: symptoms in the patient’s own words, how long, mobility, hearing, first appointment or review, and a red-flag column fed only by your clinic’s own written list.",
+     "type": "do"
+    },
+    {
+     "tool": "Phone notes",
+     "chip": "one row per call",
+     "do": "Fill the table with what you actually have, using your initials or a reference number, never a name. Type the symptoms as they were said to you.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "paste the red flags",
+     "do": "Copy in your clinic’s own red-flag criteria — the printed policy, not a model’s idea of one — so the flag column has a definition beside it.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "sort it, flag it",
+     "do": "Paste only the de-identified rows and type: \"Group these by the urgency criteria in my last two columns. For each row give one reason, and list every row where the information is too thin to judge. Do not diagnose anything.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "read every reason",
+     "do": "Check each grouping against the criteria and the flag column, then delete the model’s reason anywhere the source information was missing.",
+     "type": "check"
+    },
+    {
+     "tool": "You",
+     "chip": "hand it over cold",
+     "do": "Give the sheet to the clinician as a draft to overwrite, say out loud which rows have thin information, and let them set the order. That handover is the whole point.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "discharge-page-the-family-reads",
+   "title": "Discharge instructions into the page the family can actually follow",
+   "job": "Instructions that are correct and never read",
+   "who": "nurses, clinic admins and discharge coordinators sending people home",
+   "field": "healthcare",
+   "fieldLabel": "Clinic & care",
+   "accent": "#2dd4bf",
+   "situation": "You have handed over three pages of instructions. The next morning the relative telephones because nobody can tell which tablets stopped and who to ring at the weekend.",
+   "outcome": "One plain-language home page: what changed, what to take and what to stop, three things that mean call now, and one named contact for out of hours.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "No patient identifier and nothing from the record leaves the clinic. Type the generic wording you are allowed to reuse, never an individual’s notes, and keep the medicine list out of the chat box. The clinician or pharmacist checks the dose, frequency and interactions against the discharge summary before anything is handed over — the family cannot check it, so someone qualified must. If there is no local plain-language or easy-read standard, get the communication lead to look at it before you print.",
+   "tools": [
+    "Google Docs",
+    "You",
+    "ChatGPT",
+    "Gemini"
+   ],
+   "arrow": "Google Docs → You → ChatGPT → Gemini → You → Google Docs",
+   "prompt": "Rewrite this as one page at twelve-year-old reading level. Keep every drug name, dose and number exactly as written. Add nothing that is not in my text. Put anything you were unsure about in a list at the bottom under NOT SURE.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "paste the set wording",
+     "do": "Copy your own clinic’s generic discharge wording into a doc. No patient name, number or record in the file.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "list the four facts",
+     "do": "Add, yourself, the four things that differ for this household: what changed, what stopped, what started, and the one thing that worries them most.",
+     "type": "check"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "plain words no advice",
+     "do": "Paste the generic wording plus those four facts and type: \"Rewrite this as one page at twelve-year-old reading level. Keep every drug name, dose and number exactly as written. Add nothing that is not in my text. Put anything you were unsure about in a list at the bottom under NOT SURE.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "what they will ask",
+     "do": "Paste the page back and ask: \"Which of these sentences could a tired relative get wrong? Rewrite only those, and give me the three questions they will ask on the phone.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "check every dose",
+     "do": "Read every drug name, dose, timing and warning against the discharge summary line by line. Delete anything sitting under NOT SURE until the clinician or pharmacist confirms it.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "print and hand over",
+     "do": "Print one copy for the patient and one for whoever is actually going to be at home with them, then read the three call-now items back to them before they leave.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "thirty-page-contract-issues-list",
+   "title": "A thirty-page agreement into a list of what to push back on",
+   "job": "A contract you are not allowed to review",
+   "who": "paralegals and contract coordinators told to flag the issues by four o’clock",
+   "field": "legal",
+   "fieldLabel": "Legal & compliance",
+   "accent": "#94a3b8",
+   "situation": "The counterparty sent a thirty-page agreement with six schedules, a redline from last year nobody kept, and a deadline this afternoon. You are not the lawyer, but you are the one expected to find what matters.",
+   "outcome": "A short issues list: each clause that changes what we do, its page number, what is missing or unusual, and a proposed position to put in front of the solicitor.",
+   "minutes": 15,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Confidential and privileged material does not go into any consumer chat box — a client contract, a matter file or anything under NDA stays on Your own laptop. The output is a triage list, not legal advice: a qualified solicitor signs off the position on every clause before it goes to anyone outside the firm, and a model will invent clause references that look precise, so each one gets opened.",
+   "tools": [
+    "Your own laptop",
+    "Google Docs",
+    "Claude",
+    "ChatGPT",
+    "You"
+   ],
+   "arrow": "Your own laptop → Google Docs → Claude → ChatGPT → You → Google Docs → You",
+   "prompt": "List every clause that changes what we must do, pay, deliver or indemnify. Give the page and clause number, what it says in one line, and what is missing compared to a standard position. Quote the wording you relied on.",
+   "steps": [
+    {
+     "tool": "Your own laptop",
+     "chip": "keep it on the machine",
+     "do": "Save the agreement locally and confirm what you are allowed to process off it before any chat box opens.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "strip the boilerplate",
+     "do": "Copy the agreement into a doc, drop the headers, the notices page and any schedule that is not ours, so the pasted text is only clauses.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "what binds us",
+     "do": "For anything not confidential, paste the text and type: \"List every clause that changes what we must do, pay, deliver or indemnify. Give the page and clause number, what it says in one line, and what is missing compared to a standard position. Quote the wording you relied on.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "run the second pass",
+     "do": "Paste the same text to a second model and ask the same question, then type: \"Now list only the clauses the first pass might have missed.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "open each cited clause",
+     "do": "Work through both lists and find each clause in the real document. Delete any reference you cannot locate and any line that is not actually quoted in the text.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write the issues list",
+     "do": "One row per surviving clause: page, what it says, why it matters to us, and our proposed position with the alternative wording left blank for the solicitor.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "send to the solicitor",
+     "do": "Send the list to the qualified solicitor with the contract attached and mark anything touching liability, data or termination as needing their words, not yours.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "access-request-with-a-reason",
+   "title": "An access request you have to approve or refuse, with a written reason",
+   "job": "The request that needs a rationale, not a yes",
+   "who": "compliance officers and paralegals handling records, subject or disclosure requests",
+   "field": "legal",
+   "fieldLabel": "Legal & compliance",
+   "accent": "#94a3b8",
+   "situation": "Somebody wants a folder, a dataset or a file. Policy says you decide, and says you give a reason in writing. You have approved two today already and you wrote one sentence each time, because that is what everyone does.",
+   "outcome": "A decision record per request: what was asked, the test you applied in your own words, the reason for the outcome, what is being withheld, and the named approver who signed it.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never paste the requested material into a chat box — a model sees the request wording, nothing else, and the content stays on Your own laptop. This flow writes the reason; it does not make the decision. The legal or compliance owner who holds the delegation signs it, and anything touching privilege, a third party’s data, a safeguarding record or litigation gets escalated to them before a decision is drafted.",
+   "tools": [
+    "Google Docs",
+    "Phone notes",
+    "Claude",
+    "You",
+    "Google Sheets"
+   ],
+   "arrow": "Google Docs → Phone notes → Claude → You → Google Sheets → You",
+   "prompt": "Against this test only, list the questions I must answer before deciding, split into what the request clearly covers, what it clearly does not, and what I cannot tell from what I have described.",
+   "steps": [
+    {
+     "tool": "Google Docs",
+     "chip": "paste the policy test",
+     "do": "Copy the one test you are actually meant to apply from your own written policy — the wording, not a paraphrase — into a blank doc.",
+     "type": "do"
+    },
+    {
+     "tool": "Phone notes",
+     "chip": "describe the ask only",
+     "do": "Type what was requested, by whom, for what stated purpose, and which category of material it touches. No content, no names of third parties.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "where the test bites",
+     "do": "Paste the policy test plus your description and type: \"Against this test only, list the questions I must answer before deciding, split into what the request clearly covers, what it clearly does not, and what I cannot tell from what I have described.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "answer them yourself",
+     "do": "Work through its questions in your own words and mark every one you cannot answer from the file in front of you. Those are the ones you chase before you decide.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "log the decision",
+     "do": "Add one row: date, requester, what was asked, test applied, outcome, the reason in a sentence, what is withheld, and the approver’s name.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "approver signs it",
+     "do": "Send the reason to the person holding the delegated authority for sign-off before the reply goes out, and keep their confirmation with the log row.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "same-ticket-nine-times",
+   "title": "The same ticket nine times this week into one reply and one real fix",
+   "job": "A queue full of one error",
+   "who": "service desk agents and IT support owners with a repeat offender in the queue",
+   "field": "it",
+   "fieldLabel": "IT & data",
+   "accent": "#6ee7b7",
+   "situation": "The same error, nine times, four different people. You have answered it nine times by hand. Nobody has written down what it has in common, and nobody owns the fix.",
+   "outcome": "A known-error entry: symptom, what it has in common, the workaround that actually held, a canned reply, plus one root-cause ask with the evidence attached.",
+   "minutes": 10,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never paste logs, tickets or mailbox contents that hold usernames, IP addresses, hostnames or anything user-identifying — strip them first, or run the whole analysis on Your own laptop. A model will pick a confident cause from sparse data, so the cause you send to engineering is the one you reproduced yourself, and the fix ships only after someone with the access has tested it on a machine that is not the only one broken.",
+   "tools": [
+    "Chrome",
+    "Google Docs",
+    "ChatGPT",
+    "Perplexity",
+    "You"
+   ],
+   "arrow": "Chrome → Google Docs → ChatGPT → Perplexity → Google Docs → You",
+   "prompt": "What do these nine have in common: same trigger, same version, same time of day? Then write the four-line workaround reply an agent can paste, and the one root-cause question engineering needs. List anything you are inferring rather than reading.",
+   "steps": [
+    {
+     "tool": "Chrome",
+     "chip": "copy the nine tickets",
+     "do": "Open each ticket and copy its subject, first message and resolution into one block of text, with nothing that identifies a user or a machine.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "strip the identifiers",
+     "do": "Replace every name, IP, hostname and mailbox with placeholder text you can map back locally if you need to.",
+     "type": "do"
+    },
+    {
+     "tool": "ChatGPT",
+     "chip": "what do they share",
+     "do": "Paste the redacted block and type: \"What do these nine have in common: same trigger, same version, same time of day? Then write the four-line workaround reply an agent can paste, and the one root-cause question engineering needs. List anything you are inferring rather than reading.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Perplexity",
+     "chip": "is it a known fault",
+     "do": "Take only the exact error string, with your details removed, and search for it: \"Show me the vendor pages that use this exact wording, with dates, and whether a patch exists.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write the known error",
+     "do": "Add one entry to your team’s doc: symptom, cause you have actually confirmed, workaround, ticket count, and the escalation with the evidence attached.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "reproduce it once",
+     "do": "Reproduce the fault on one machine before you call it a cause, and check the workaround line reads like something you would send a human.",
+     "type": "check"
+    }
+   ]
+  },
+  {
+   "slug": "password-reset-faq",
+   "title": "The access request that is always one checkbox away",
+   "job": "Answering the same access question in person all day",
+   "who": "IT admins and helpdesk agents who keep walking someone through a form",
+   "field": "it",
+   "fieldLabel": "IT & data",
+   "accent": "#6ee7b7",
+   "situation": "Twice this week you have had a message that turns out to be one unticked box on a request form. Both people waited a day. Both could have fixed it in ninety seconds if the page had told them the box exists.",
+   "outcome": "A one-page access FAQ: the six requests people actually make, the exact field or checkbox for each, where to go, and the four lines that mean a human has to intervene.",
+   "minutes": 12,
+   "cost": "free",
+   "costLabel": "Free",
+   "payers": [],
+   "guard": "Never put a real system name, account, group, role or URL you would not publish internally into a chat box — describe systems generically, and keep anything close to credentials out of the flow entirely. Check every path and field name against the live form yourself: a model will invent a tidy workflow that no screen contains, and an FAQ that sends people to a button that does not exist costs you more tickets than no FAQ at all.",
+   "tools": [
+    "Gmail",
+    "Claude",
+    "Chrome",
+    "Google Docs",
+    "You"
+   ],
+   "arrow": "Gmail → Claude → Chrome → Google Docs → You → Google Docs",
+   "prompt": "Group these by whether the person could fix it themselves from a form. For each group say what information they would need before they start, and which ones genuinely require an admin to act.",
+   "steps": [
+    {
+     "tool": "Gmail",
+     "chip": "collect this month",
+     "do": "Search your own inbox and the shared mailbox for the access requests of the last month and copy the questions, not the answers, into one list.",
+     "type": "do"
+    },
+    {
+     "tool": "Claude",
+     "chip": "sort self-serve vs me",
+     "do": "Paste the list and type: \"Group these by whether the person could fix it themselves from a form. For each group say what information they would need before they start, and which ones genuinely require an admin to act.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Chrome",
+     "chip": "map to the real form",
+     "do": "Open each request form and note the exact field, checkbox or drop-down that answers it, with the wording the screen actually uses.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "write the one-pager",
+     "do": "Six questions, each with the one field that decides it and a link. End with the four cases where a human must step in and who to message.",
+     "type": "do"
+    },
+    {
+     "tool": "You",
+     "chip": "walk each path",
+     "do": "Follow every route in the document on a live screen. Delete anything you cannot reach, and fix every word the form does not actually say.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Docs",
+     "chip": "link it in the reply",
+     "do": "Add the page link to your standard reply so the next request is one click, then tell whoever owns the request form that it exists.",
+     "type": "do"
+    }
+   ]
+  },
+  {
+   "slug": "pasted-data-to-readable-table",
+   "title": "The mess of data pasted into your sheet turned into something readable",
+   "job": "A number question with no explanation attached",
+   "who": "analysts and the office IT person who becomes the spreadsheet",
+   "field": "it",
+   "fieldLabel": "IT & data",
+   "accent": "#6ee7b7",
+   "situation": "Somebody has pasted two thousand rows into your sheet, three dates in three formats, an ID column where the zero got eaten, and no idea what the columns mean. They want the answer by three.",
+   "outcome": "A cleaned table plus one paragraph in plain English that names what was fixed, what was dropped and what is still unknown.",
+   "minutes": 15,
+   "cost": "signup",
+   "costLabel": "Free account",
+   "payers": [],
+   "guard": "Redact before you paste, not after — names, account numbers, email addresses and anything user-identifying go, and if the file is a data subject’s file it stays on Your own laptop. A model will silently invent column meanings and drop rows it finds awkward, so the plain-English note must list every change it made and you must reconcile the row count before you send the answer.",
+   "tools": [
+    "Google Sheets",
+    "Excel",
+    "Gemini",
+    "You"
+   ],
+   "arrow": "Google Sheets → Google Sheets → Excel → Google Sheets → Gemini → You → Google Sheets",
+   "prompt": "Clean these into one table: one date format, one number format, leading zeros restored on the ID column. Split each problem into its own column and write a plain-English note on what you changed. Do not interpret or aggregate anything yet.",
+   "steps": [
+    {
+     "tool": "Google Sheets",
+     "chip": "copy to a scratch tab",
+     "do": "Duplicate the data into a new sheet and work only on the copy, so the original stays untouched and provable.",
+     "type": "do"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "drop private columns",
+     "do": "Remove every column a stranger should not see, then add a column asking the owner what each remaining header actually means.",
+     "type": "do"
+    },
+    {
+     "tool": "Excel",
+     "chip": "paste it and normalise",
+     "do": "Paste the redacted rows into a blank web workbook and type: \"Clean these into one table: one date format, one number format, leading zeros restored on the ID column. Split each problem into its own column and write a plain-English note on what you changed. Do not interpret or aggregate anything yet.\"",
+     "type": "ask"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "paste it back",
+     "do": "Paste the clean version beside the original and the change notes on a second tab.",
+     "type": "do"
+    },
+    {
+     "tool": "Gemini",
+     "chip": "what is the question",
+     "do": "Once the shape is clean, paste twenty sample rows and ask: \"Given these columns, what are the three questions this data can actually answer, and what would it badly mislead someone about?\"",
+     "type": "ask"
+    },
+    {
+     "tool": "You",
+     "chip": "count and spot-check",
+     "do": "Compare the row count of the copy against the original, and spot-check five random values. If the model dropped or merged anything, you will only catch it here.",
+     "type": "check"
+    },
+    {
+     "tool": "Google Sheets",
+     "chip": "answer in one note",
+     "do": "Reply to the owner with the answer, the three fixes you made, the rows you dropped and the one column you still do not understand.",
+     "type": "do"
+    }
+   ]
+  }
+ ]
+}

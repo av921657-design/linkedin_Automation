@@ -1,7 +1,7 @@
 'use client';
 
 import { DayRail } from './dayrail';
-import { RESULT_PILL, RESULT_LABEL, stamp } from '../lib/ui';
+import { RESULT_PILL, RESULT_LABEL, DAILY_PILL, NL_LABEL, NL_PILL, dailyNote, newsletterNote, stamp } from '../lib/ui';
 
 export function Overview({ cfg, loadedVersion, status, history, cloud, authStale, countdown, running, paused }) {
   const rows = history.slice(0, 12);
@@ -46,6 +46,7 @@ export function Overview({ cfg, loadedVersion, status, history, cloud, authStale
 
       <div className="stats">
         <div className="stat accent"><div className="n">{status?.counts?.postedTotal ?? '—'}</div><div className="l">posts delivered, all time</div></div>
+        <div className="stat"><div className="n">{status?.counts?.maxPerDay ? `${status.counts.postedToday ?? 0}/${status.counts.maxPerDay}` : '—'}</div><div className="l">used of today&apos;s cap</div></div>
         <div className="stat"><div className="n">{status?.counts?.queue ?? '—'}</div><div className="l">queue folders pending</div></div>
         <div className="stat"><div className="n">{status?.counts?.failedDir ?? '—'}</div><div className="l">parked in failed/</div></div>
         <div className="stat"><div className="n">{cloud?.ledgerPosted ?? '—'}</div><div className="l">in the cloud ledger</div></div>
@@ -68,6 +69,23 @@ export function Overview({ cfg, loadedVersion, status, history, cloud, authStale
                 ) : eng.attempted ? (
                   <span className="pill warn" title={eng.error || ''}>engagement found nothing · run itself is fine</span>
                 ) : null}
+              </>
+            )}
+            {status.daily && (
+              <>
+                <br />
+                <span className={`pill ${DAILY_PILL[status.daily.result] || ''}`} title={status.daily.requestId || ''}>
+                  {dailyNote(status.daily, countdown.tz)}
+                </span>
+              </>
+            )}
+            {status.newsletter && (
+              <>
+                <br />
+                <span className={`pill ${NL_PILL[status.newsletter.waiting] || ''}`}>
+                  {NL_LABEL[status.newsletter.waiting] || (status.newsletter.enabled === false ? 'newsletter off' : 'newsletter')}
+                </span>{' '}
+                <span style={{ fontSize: 13 }}>{newsletterNote(status.newsletter)}</span>
               </>
             )}
             {status.error && <><br /><span className="err">{status.error}</span></>}
@@ -100,7 +118,7 @@ export function Overview({ cfg, loadedVersion, status, history, cloud, authStale
                   ? <><span className="pill fail">failed</span> {cloud.backup.error || 'unknown error'}</>
                   : <span className="pill warn">none reported</span>}
             </p>
-            <p className="hint">Daily archive of queue/, state/, config and the browser profile → OneDrive (AES-encrypted).</p>
+            <p className="hint">Daily archive of queue/, state/, newsletter-issues/, config and the browser profile → OneDrive (AES-encrypted).</p>
           </div>
         </div>
       </div>
@@ -116,7 +134,7 @@ export function Overview({ cfg, loadedVersion, status, history, cloud, authStale
                   <td className="mono">{at(r.at)}</td>
                   <td><span className={`pill ${RESULT_PILL[r.result] || ''}`}>{r.dryRun ? 'dry' : RESULT_LABEL[r.result] || r.result}</span></td>
                   <td className="mono">{r.candidate || '—'}</td>
-                  <td className="hint">{[r.error || r.source || '', r.engagement?.liked || r.engagement?.commented ? `${[r.engagement.liked && 'liked', r.engagement.commented && 'commented'].filter(Boolean).join('+')}` : ''].filter(Boolean).join(' · ')}</td>
+                  <td className="hint">{[r.error || r.source || '', r.daily ? dailyNote(r.daily, countdown.tz) : '', r.plan?.reason ? `plan · ${r.plan.reason}` : '', r.engagement?.liked || r.engagement?.commented ? `${[r.engagement.liked && 'liked', r.engagement.commented && 'commented'].filter(Boolean).join('+')}` : ''].filter(Boolean).join(' · ')}</td>
                 </tr>
               ))}
             </tbody>
@@ -126,6 +144,14 @@ export function Overview({ cfg, loadedVersion, status, history, cloud, authStale
 
       <div className="card">
         <h2>Notes</h2>
+        <p className="hint">
+          Each day the machine researches the public web (Web research tab), messages you the findings on Telegram, and writes plus
+          publishes the one you pick — <b>nothing goes up without your answer</b>. Once a week it offers something bigger instead: the
+          AI newsletter, with the version ladder and its infographic (<b>Weekly newsletter</b> tab), and it answers to its own{' '}
+          <span className="mono">/nl yes</span>. It never opens a LinkedIn profile page: the only
+          LinkedIn page it visits is the post composer, on your account, after a yes. The one exception is content you drop into{' '}
+          <span className="mono">queue/</span> yourself, which needs no asking.
+        </p>
         <p className="hint">
           The automation on your Mac pulls this config at the start of every scheduled run (launchd, day-wise — see the <b>Schedule</b> tab) and pushes results back after.
           If the Mac is offline, it falls back to the last cached copy, then to its local config.json — posting never depends on the dashboard being reachable.
